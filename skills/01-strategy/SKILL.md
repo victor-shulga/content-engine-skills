@@ -1,6 +1,6 @@
 ---
 name: 01-strategy
-description: Step 1 of the Content Engine flow. Build a machine-readable LinkedIn social selling strategy in Notion from a person LinkedIn profile + company site/LinkedIn — goals/KPI, ICP+persona, enemy+signature, theme, offers+lead magnets, voice profile, content pillars with quotas, weekly rhythm, distribution playbook, backstory. Use when starting the content engine for a new client, or when the user asks to build a LinkedIn strategy, контент-стратегію, or voice profile for a person.
+description: Step 1 of the Content Engine flow. Build a machine-readable LinkedIn social selling strategy in Notion from a person LinkedIn profile + company site/LinkedIn — goals/KPI, ICP+persona, enemy+signature, content pillars (no quotas), offer audit for LinkedIn sellability, voice profile, viral levers, distribution playbook, backstory. Use when starting the content engine for a new client, or when the user asks to build a LinkedIn strategy, контент-стратегію, or voice profile for a person.
 argument-hint: "<person-linkedin-url> <company-site-or-linkedin>"
 ---
 
@@ -8,7 +8,7 @@ argument-hint: "<person-linkedin-url> <company-site-or-linkedin>"
 
 Перший крок Content Engine. Створює стратегічний документ у Notion за каноном
 `${CLAUDE_PLUGIN_ROOT}/reference/strategy-template.md` (9 секцій). Це не PDF для клієнта,
-а **конфіг для всіх наступних кроків**: секції 6–8 — машиночитні таблиці.
+а **конфіг для всіх наступних кроків**: секції 4, 6, 7 — машиночитні таблиці.
 
 **Вхід:** `$ARGUMENTS` — LinkedIn-профіль людини + сайт або company-LinkedIn. Якщо чогось
 бракує — запитай перед стартом.
@@ -18,8 +18,8 @@ argument-hint: "<person-linkedin-url> <company-site-or-linkedin>"
 1. **Профіль людини (Apify):** `apimaestro/linkedin-profile-detail` (хедлайн, about, досвід) +
    `apimaestro/linkedin-profile-posts` (останні 50–100 постів). З постів витягни:
    - реальні мовні патерни автора (для Секції 6 — voice profile);
-   - що вже працювало: топ-пости по engagement (пріори для Секції 7);
-   - біографічні факти-«патрони» з числами (для Секції 10).
+   - що вже працювало: топ-пости по engagement (пріори для Секцій 4 і 7);
+   - біографічні факти-«патрони» з числами (для Секції 9).
    Якщо постів нема/мало — позначи «холодний акаунт», voice profile буде [ПРИПУЩЕННЯ]
    з калібруванням на перших 10 постах.
 2. **Компанія:** сайт — через скіли `website-scraper` + `deep-company-analyser` (фолбек:
@@ -53,7 +53,7 @@ argument-hint: "<person-linkedin-url> <company-site-or-linkedin>"
 1. Якщо нема головної сторінки «Content Engine» — створи її + DB Idea Pool / Weekly Plans /
    Posts за `${CLAUDE_PLUGIN_ROOT}/reference/notion-schema.md`. Повідом користувачу ID
    для збереження в пам'ять.
-2. Створи/онови сторінку **«🧭 {Client} · Strategy»** з 10 секціями.
+2. Створи/онови сторінку **«🧭 {Client} · Strategy»** з 9 секціями.
 3. В кінці документа — блок **«Відкриті питання»**: всі [ПРИПУЩЕННЯ] списком з питанням
    до клієнта на кожне.
 4. Засій Idea Pool: 10–15 стартових ідей (по 2–3 на пілар) зі статусом `new`,
