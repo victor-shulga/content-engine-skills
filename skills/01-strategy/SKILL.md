@@ -7,7 +7,7 @@ argument-hint: "<person-linkedin-url> <company-site-or-linkedin>"
 # 01 · Strategy — LinkedIn-стратегія як конфіг
 
 Перший крок Content Engine. Створює стратегічний документ у Notion за каноном
-`${CLAUDE_PLUGIN_ROOT}/reference/strategy-template.md` (10 секцій). Це не PDF для клієнта,
+`${CLAUDE_PLUGIN_ROOT}/reference/strategy-template.md` (9 секцій). Це не PDF для клієнта,
 а **конфіг для всіх наступних кроків**: секції 6–8 — машиночитні таблиці.
 
 **Вхід:** `$ARGUMENTS` — LinkedIn-профіль людини + сайт або company-LinkedIn. Якщо чогось
@@ -35,14 +35,15 @@ argument-hint: "<person-linkedin-url> <company-site-or-linkedin>"
 
 ## Побудова документа
 
-Заповни всі 10 секцій за `strategy-template.md`, з правилами:
+Заповни всі 9 секцій за `strategy-template.md`, з правилами:
 
 - **Секція 4 (пілари):** 3–5 піларів; кожен прив'язаний до viral lever
   (`${CLAUDE_PLUGIN_ROOT}/reference/methodology.md` §5) і до доказів компетенції, знайдених
   у п.1. БЕЗ жорстких квот — тільки funnel + день тижня; баланс тримає 04-weekly-plan.
   Якщо у клієнта мало доказів — пілари на запасних стратегіях компетенції (methodology §2.3).
-- **Секція 8 (ритм):** базуйся на methodology §2.5, але підлаштуй під commitment
+- **Ритм у Секції 4:** базуйся на methodology §2.5, але підлаштуй під commitment
   (3 пости/тиждень → Пн/Ср/Пт: TOFU-MOFU-BOFU-ротація; 4 → без другого TOFU).
+  Формати не фіксуй — їх визначить тестування.
 - **Секція 6 (voice):** список «що ніколи не пишемо» — мінімум 5 пунктів, з них
   частина універсальні (AI-кліше), частина — специфічні для людини (з аналізу постів).
 - Хуки-приклади в піларах — за правилами `${CLAUDE_PLUGIN_ROOT}/reference/hook-bank.md`.
@@ -60,8 +61,8 @@ argument-hint: "<person-linkedin-url> <company-site-or-linkedin>"
 
 ## Definition of Done
 
-- Всі 10 секцій заповнені; жодного «TBD» без позначки [ПРИПУЩЕННЯ].
-- Секції 6–8 — таблицями (машиночитні).
+- Всі 9 секцій заповнені; жодного «TBD» без позначки [ПРИПУЩЕННЯ].
+- Секції 4, 6, 7 — таблицями (машиночитні).
 - Voice profile містить ≥ 3 фірмові патерни з реальних постів (або позначений холодний акаунт).
 - Пілари без квот: тільки funnel + день; ритм покриває commitment (N постів/тиждень).
 - Idea Pool засіяний ≥ 10 ідеями, кожна проходить гейт competence proof.
