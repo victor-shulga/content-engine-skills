@@ -8,5 +8,13 @@
   },
   "keywords": ["linkedin", "content", "social-selling", "b2b", "notion", "voice-profile", "content-pillars", "weekly-plan"],
   "license": "MIT",
+  "userConfig": {
+    "linkedin_li_at": {
+      "type": "string",
+      "title": "LinkedIn li_at cookie",
+      "description": "LinkedIn session cookie (li_at). Used by cookie-based Apify actors to pull Sales Navigator lists (09-engage), own creator analytics with impressions (07-track, 08-repurpose), and full profile data. Optional — without it, lists fall back to a one-time CSV export and analytics to public engagement metrics.",
+      "sensitive": true
+    }
+  },
   "skills": "./skills/"
 }
