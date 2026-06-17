@@ -12,7 +12,7 @@
       "name": "content-engine",
       "source": "./",
       "description": "LinkedIn content engine: strategy (Notion config doc) -> research layer -> weekly idea recommender -> hook-scored voice-true production -> creatives -> KPI tracking and recycling. Built on Viktor Shulha's LinkedIn Social Selling methodology.",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "keywords": ["linkedin", "content", "social-selling", "b2b", "notion"],
       "author": {
         "name": "Victor Shulga"

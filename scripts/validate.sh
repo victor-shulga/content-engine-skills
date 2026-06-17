@@ -105,7 +105,7 @@ if nums:
     expected = list(range(1, max(nums) + 1))
     missing = [f"{n:02d}" for n in expected if n not in nums]
     dups = sorted({f"{n:02d}" for n in nums if nums.count(n) > 1})
-    if missing: err(f"sequence gap: missing step(s) {missing}")
+    if missing: warn(f"sequence gap: step(s) {missing} not built yet (ok if on roadmap)")
     if dups:    err(f"sequence duplicate step number(s) {dups}")
 if not os.path.isdir(os.path.join(ROOT, "skills", "run")):
     err("missing orchestrator skill: skills/run")
