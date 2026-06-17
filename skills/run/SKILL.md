@@ -12,7 +12,7 @@ argument-hint: "[client] [step]"
 |---|---|---|---|
 | 01 | `content-engine:01-strategy` — стратегія-конфіг у Notion | раз + ревізія щокварталу | ✅ |
 | 02 | `02-profile-audit` — аудит профілю, банер, featured | раз + після ребрендів | 🔜 планується |
-| 03 | `content-engine:03-research` — research layer: дзвінки (Fathom), власний потік, outliers, коменти → Idea Pool | щотижня (cron) | ✅ |
+| 03 | `content-engine:03-research` — research layer: дзвінки (Fathom), власний потік, outliers, коменти, TikTok, Reddit → Idea Pool | щотижня (cron) | ✅ |
 | 04 | `04-weekly-plan` — тижневий план: 2–3 варіанти на слот → затвердження | щотижня | 🔜 планується |
 | 05 | `05-write` — хуки → скоринг → драфт у голосі → грейдер-цикл | на кожен пост | 🔜 планується |
 | 06 | `06-creative` — креативи: карусель/інфографіка/single image | на кожен пост | 🔜 планується |

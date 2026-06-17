@@ -1,7 +1,7 @@
 ---
 name: 03-research
-description: Step 3 of the Content Engine flow. Weekly research layer that refills the Idea Pool from four sources — call transcripts (Fathom), the author own work-stream, LinkedIn topic-cluster outliers (Apify), and comment mining. Applies the 3-criteria gate, dedupes against the pool, tags pillar/funnel/hook/competence, scores, and writes Status=new ideas to Notion. Use when the user says запусти ресерч, research layer, наповни idea pool, знайди ідеї для контенту, or it is the weekly research run.
-argument-hint: "[client] [--source=fathom|work|outliers|comments|all] [--since=7d]"
+description: Step 3 of the Content Engine flow. Weekly research layer that refills the Idea Pool from six sources — call transcripts (Fathom), the author own work-stream, LinkedIn topic-cluster outliers (Apify), comment mining, TikTok viral trends, and Reddit pain-mining. Applies the 3-criteria gate, dedupes against the pool, tags pillar/funnel/hook/competence, scores, and writes Status=new ideas to Notion. Use when the user says запусти ресерч, research layer, наповни idea pool, знайди ідеї для контенту, or it is the weekly research run.
+argument-hint: "[client] [--source=fathom|work|outliers|comments|tiktok|reddit|all] [--since=7d]"
 ---
 
 # 03 · Research — наповнення Idea Pool
@@ -20,7 +20,9 @@ argument-hint: "[client] [--source=fathom|work|outliers|comments|all] [--since=7
   leaders з Секції 2 стратегії). НЕ generic-вірал — лише ніша.
 - **Fathom scope** (джерело A): які типи дзвінків мінити (дефолт: client / discovery / sales /
   mentoring) + **правило анонімізації** (узагальнювати, без імен клієнтів — як «без NDA» у стратегії).
-- **Source toggles**: які з 4 джерел активні цього клієнта.
+- **TikTok seeds** (джерело E): хештеги/креатори в бізнес-сейлз-founder ніші (з Make-сценарію Viktor).
+- **Reddit субредити** (джерело F): список сабредитів ICP-світу (з Make-сценарію Viktor).
+- **Source toggles**: які з 6 джерел активні цього клієнта.
 
 ## Джерела (за пріоритетом — для Viktor дзвінки > скрейп)
 
@@ -49,6 +51,24 @@ Fathom URL (внутрішній, не для поста).
 ### D · Коментарі
 Свої пости (Posts DB, коли запрацює 07) + коменти під постами watchlist (Apify). Витягни
 питання/болі, що повторюються в коментах → теми П1/П2. `Source = comment-mining`.
+
+### E · TikTok-тренди (Apify) — формат/хук-патерни, «steal like an artist»
+Існує як Make-сценарій Viktor (TikTok→Telegram). Тут — нативно: Apify TikTok scraper по seed-ах
+з конфіга (хештеги/креатори в бізнес-сейлз-founder ніші) → вірусні short-form. Беремо **патерн
+хука й формат**, не тему (TikTok-вірал ≠ GTM-для-агенцій). Обов'язковий крок — **реframe під ICP**:
+короткий хук-патерн → переклад на біздев-проблему агенцій. `Source = tiktok-trend`, Source link — URL.
+Ближче до C (референс), ніж до болю — частіше йде в Notes картки як «кут подачі».
+
+### F · Reddit-болі (Apify) — реальні питання ICP-світу
+Існує як Make-сценарій Viktor (Reddit→Telegram). Нативно: Apify Reddit scraper по сабредитах
+з конфіга (r/agency, r/sales, r/msp, r/Entrepreneur, r/startups…) → треди, де фаундери/сейли
+скаржаться на пайплайн, найм, позиціонування. Це **публічний аналог дзвінків (A)**: verbatim-болі
+й питання в словах ICP-світу → теми П1/П2. Обов'язково — **реframe під твій ICP** (generic Reddit-
+біль ≠ пост без твого proof/кута). `Source = reddit-pain`, Source link — URL треду.
+
+> 📌 Make-сценарії TikTok/Reddit (Haiku→Telegram «LinkedIn Drafts») Viktor уже має. Цей скіл —
+> їхній «мозок»: ті самі джерела, але через гейт/дедуп/тег/competence + голос Viktor, у Idea Pool
+> (не сирі чернетки в Telegram). Make лишається як опційний тригер (нервова система) — згодом n8n.
 
 ## Конвеєр обробки (для кожного кандидата)
 
