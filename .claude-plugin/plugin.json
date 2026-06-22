@@ -1,6 +1,6 @@
 {
   "name": "content-engine",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "LinkedIn content engine for B2B founders and their clients. From a person LinkedIn + company site: build a machine-readable LinkedIn strategy in Notion (ICP, voice profile, pillars), audit the profile, run a weekly research+recommendation loop, then creative-first voice-true production. Tracking lives in a separate tool. Outputs to Notion in Ukrainian.",
   "author": {
     "name": "Viktor Shulha",
