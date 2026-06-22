@@ -1,7 +1,7 @@
 {
   "name": "content-engine-skills",
   "metadata": {
-    "description": "Content Engine skills — LinkedIn social selling content system: strategy, research, weekly recommendations, production, creatives, tracking. Outputs to Notion in Ukrainian."
+    "description": "Content Engine skills — LinkedIn social selling content system: strategy, profile audit, research, weekly recommendations, creative-first production. Tracking is a separate tool. Outputs to Notion in Ukrainian."
   },
   "owner": {
     "name": "Victor Shulga",
@@ -11,9 +11,15 @@
     {
       "name": "content-engine",
       "source": "./",
-      "description": "LinkedIn content engine: strategy (Notion config doc) -> research layer -> weekly idea recommender -> hook-scored voice-true production -> creatives -> KPI tracking and recycling. Built on Viktor Shulha's LinkedIn Social Selling methodology.",
-      "version": "0.4.0",
-      "keywords": ["linkedin", "content", "social-selling", "b2b", "notion"],
+      "description": "LinkedIn content engine: strategy (Notion config) -> profile audit -> research layer -> weekly idea recommender -> creative-first voice-true production. Built on Viktor Shulha's LinkedIn Social Selling methodology. Tracking lives in a separate tool.",
+      "version": "0.5.0",
+      "keywords": [
+        "linkedin",
+        "content",
+        "social-selling",
+        "b2b",
+        "notion"
+      ],
       "author": {
         "name": "Victor Shulga"
       }

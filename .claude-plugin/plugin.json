@@ -1,18 +1,27 @@
 {
   "name": "content-engine",
-  "version": "0.4.0",
-  "description": "LinkedIn content engine for B2B founders and their clients. From a person LinkedIn + company site: build a machine-readable LinkedIn strategy in Notion (ICP, voice profile, pillars, weekly rhythm), then run a weekly idea-recommendation loop, voice-true production with hook scoring and a grader, creatives, and a performance-tracking feedback cycle. Outputs to Notion in Ukrainian.",
+  "version": "0.5.0",
+  "description": "LinkedIn content engine for B2B founders and their clients. From a person LinkedIn + company site: build a machine-readable LinkedIn strategy in Notion (ICP, voice profile, pillars), audit the profile, run a weekly research+recommendation loop, then creative-first voice-true production. Tracking lives in a separate tool. Outputs to Notion in Ukrainian.",
   "author": {
     "name": "Viktor Shulha",
     "url": "https://github.com/victor-shulga"
   },
-  "keywords": ["linkedin", "content", "social-selling", "b2b", "notion", "voice-profile", "content-pillars", "weekly-plan"],
+  "keywords": [
+    "linkedin",
+    "content",
+    "social-selling",
+    "b2b",
+    "notion",
+    "voice-profile",
+    "content-pillars",
+    "weekly-plan"
+  ],
   "license": "MIT",
   "userConfig": {
     "linkedin_li_at": {
       "type": "string",
       "title": "LinkedIn li_at cookie",
-      "description": "LinkedIn session cookie (li_at). Used by cookie-based Apify actors to pull Sales Navigator lists (09-engage), own creator analytics with impressions (07-track, 08-repurpose), and full profile data. Optional — without it, lists fall back to a one-time CSV export and analytics to public engagement metrics.",
+      "description": "LinkedIn session cookie (li_at). Used by cookie-based Apify actors to pull Sales Navigator lists (08-engage) and full profile data. Optional — research uses no-cookie actors; without li_at, lists fall back to a one-time CSV export. Creator analytics with impressions belongs to the separate tracking tool.",
       "sensitive": true
     }
   },

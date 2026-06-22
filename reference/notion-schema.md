@@ -59,7 +59,7 @@ Body сторінки плану: таблиця слотів — день · fu
 | Pillar / Funnel / Format | select | копія на момент публікації |
 | Posted date | date | |
 | Post URL | url | |
-| Impressions / Likes / Comments / Reposts | number | тижневий інжест (крок 07) |
+| Impressions / Likes / Comments / Reposts | number | тижневий інжест (трекінг-тул) |
 | ER % | formula | (likes+comments+reposts)/impressions |
 | Dialogues started | number | ручний інпут або з DM-трекінгу — головний сигнал якості |
 | Leads / Calls | number | атрибуція, ручний інпут |
@@ -71,11 +71,11 @@ Body сторінки плану: таблиця слотів — день · fu
 ```
 research (03) ──┐
 call insights ──┼──> Idea Pool ──> Weekly Plan (04) ──> production (05/06) ──> Posts
-recycle (07) ───┘        ↑                                                      │
-                         └────────── score update ← weekly metrics (07) ←───────┘
+recycle (трекінг)─┘        ↑                                                      │
+                         └────────── score update ← weekly metrics (трекінг) ←───────┘
 ```
 
 - Рекомендатор (04) читає: Idea Pool (Status=new/recommended, пауза по Last used),
   стратегію клієнта (секції 7–8), Posts (performance prior по піларах/темах).
-- Трекінг (07) пише: метрики у Posts, нові recycle-ідеї в Idea Pool (Source=recycle),
+- Трекінг-тул пише: метрики у Posts, нові recycle-ідеї в Idea Pool (Source=recycle),
   оновлені пріори скорів.

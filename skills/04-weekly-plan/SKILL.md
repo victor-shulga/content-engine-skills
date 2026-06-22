@@ -16,10 +16,10 @@ argument-hint: "[client] [week-start YYYY-MM-DD]"
 ## Читаємо
 
 1. **Стратегія (Notion `🧭 {Client} · Strategy`):** Секція 4 — пілари (funnel, день), ритм
-   (N постів/тиждень, дні); Секція 7 — viral levers (ваги, відкалібровані 07-track); Секція 6 — voice.
+   (N постів/тиждень, дні); Секція 7 — viral levers (ваги, відкалібровані трекінг-тулом); Секція 6 — voice.
 2. **Idea Pool (`${CLAUDE_PLUGIN_ROOT}/reference/notion-schema.md`):** усі картки
    `Status` ∈ {new, recommended}, з pillar/funnel/format/hook/competence/score/source/Last used.
-3. **Posts DB (якщо 07 вже працює):** performance-пріори по піларах/темах/форматах — вага в скор.
+3. **Posts DB (якщо трекінг-тул вже працює):** performance-пріори по піларах/темах/форматах — вага в скор.
 4. **Правила:** `${CLAUDE_PLUGIN_ROOT}/reference/methodology.md` §2.5 (ритм), §2.6 (рециркуляція),
    §4 (distribution каденси).
 
@@ -67,7 +67,7 @@ argument-hint: "[client] [week-start YYYY-MM-DD]"
 
 Користувач позначає вибір (у Notion-колонці «Вибір» або відповіддю). На наступному виклику /
 по команді: вибрані ідеї → `Status = approved` в Idea Pool (решта лишаються `recommended`);
-план → `Status = approved`. Далі 05-write/06-creative беруть `approved` по слотах.
+план → `Status = approved`. Далі 05-creative → 06-write беруть `approved` по слотах.
 
 ## Definition of Done
 

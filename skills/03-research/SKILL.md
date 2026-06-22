@@ -43,7 +43,7 @@ Fathom URL (внутрішній, не для поста).
 
 ### C · LinkedIn-аутлаєри в кластері (Apify, no-cookie — нуль ризику для акаунта)
 Два режими, ОБИДВА без cookie/логіну (акаунт автора не ризикує; li_at НЕ потрібен — його
-лишаємо для 07-track/09-engage):
+лишаємо для трекінг-тулу / 08-engage):
 - **C1 · По креаторах (watchlist):** `apimaestro/linkedin-profile-posts` по кожному профілю
   watchlist → 5x+ аутлаєри vs медіана креатора. (той самий актор, що тягнув 50 постів
   van der Blom — 100% success). Можна через скіл `viral-research`.
@@ -57,7 +57,7 @@ Fathom URL (внутрішній, не для поста).
 картки, не окремий запис). `Source = research-outlier`, Source link — URL оригіналу.
 
 ### D · Коментарі
-Свої пости (Posts DB, коли запрацює 07) + коменти під постами watchlist (Apify). Витягни
+Свої пости (Posts DB, коли запрацює трекінг-тул) + коменти під постами watchlist (Apify). Витягни
 питання/болі, що повторюються в коментах → теми П1/П2. `Source = comment-mining`.
 
 ### E · TikTok-тренди (Apify) — формат/хук-патерни, «steal like an artist»
