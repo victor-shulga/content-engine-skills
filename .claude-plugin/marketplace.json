@@ -12,7 +12,7 @@
       "name": "content-engine",
       "source": "./",
       "description": "LinkedIn content engine: strategy (Notion config) -> profile audit -> research layer -> weekly idea recommender -> creative-first voice-true production. Built on Viktor Shulha's LinkedIn Social Selling methodology. Tracking lives in a separate tool.",
-      "version": "0.8.0",
+      "version": "0.8.1",
       "keywords": [
         "linkedin",
         "content",
