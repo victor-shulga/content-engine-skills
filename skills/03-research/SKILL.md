@@ -41,12 +41,20 @@ Fathom URL (внутрішній, не для поста).
 (як побудова цього engine), фінмоделі, GTM-деліверабли (анонімно). Витягни «ось що я зараз
 будую/роблю» → теми П3 (AI/Claude) і П4 (personal). `Source = own-thought`.
 
-### C · LinkedIn-аутлаєри в кластері — реюз `/viral-research`
-Виклич скіл **`viral-research`** по watchlist (Apify) → 5x+ аутлаєри vs медіана креатора.
-⚠️ Interest Graph: беремо аутлаєри **в topic-кластері клієнта**, не generic. Аутлаєр →
-ідея в пул ТІЛЬКИ якщо у клієнта є competence proof на цю тему (інакше — це формат-референс,
-не ідея: клади у Notes картки спорідненої ідеї як «кут подачі», а не окремим записом).
-`Source = research-outlier`, Source link — URL оригіналу.
+### C · LinkedIn-аутлаєри в кластері (Apify, no-cookie — нуль ризику для акаунта)
+Два режими, ОБИДВА без cookie/логіну (акаунт автора не ризикує; li_at НЕ потрібен — його
+лишаємо для 07-track/09-engage):
+- **C1 · По креаторах (watchlist):** `apimaestro/linkedin-profile-posts` по кожному профілю
+  watchlist → 5x+ аутлаєри vs медіана креатора. (той самий актор, що тягнув 50 постів
+  van der Blom — 100% success). Можна через скіл `viral-research`.
+- **C2 · По темі (keyword/hashtag search):** `apimaestro/linkedin-posts-search-scraper-no-cookies`
+  (keyword) або `harvestapi/linkedin-post-search` (дешевше ~$0.002/пост, багатші фільтри:
+  author industry / keywords / mentions) → вірусні пости НА ТЕМУ по всьому LinkedIn, навіть від
+  людей поза watchlist. ОБОВ'ЯЗКОВО фільтрувати до кластера (author job title / industry /
+  keywords), інакше — generic-вірал.
+⚠️ Interest Graph: аутлаєри **в topic-кластері клієнта**, не generic. Аутлаєр → ідея в пул
+ТІЛЬКИ якщо у клієнта є competence proof на тему (інакше — формат/кут-референс у Notes сусідньої
+картки, не окремий запис). `Source = research-outlier`, Source link — URL оригіналу.
 
 ### D · Коментарі
 Свої пости (Posts DB, коли запрацює 07) + коменти під постами watchlist (Apify). Витягни
