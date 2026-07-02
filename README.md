@@ -10,7 +10,7 @@ Claude Code plugin: системний LinkedIn-контент для B2B-фау
 ```
 01 Strategy ──> Notion-конфіг (ICP, voice, пілари, ритм)
                        │
-03 Research ──> Idea Pool (outliers, дзвінки, коменти, рециркуляція)
+03 Research ──> Idea Pool (Fathom, LinkedIn, TikTok, Reddit, коменти, власний потік)
                        │
 04 Weekly Plan ──> 2–3 варіанти на слот, затвердження за 5 хв
                        │
@@ -28,7 +28,7 @@ Claude Code plugin: системний LinkedIn-контент для B2B-фау
 |---|---|---|
 | `01-strategy` | LinkedIn-стратегія як машиночитний конфіг у Notion (10 секцій) | ✅ v0.1.0 |
 | `02-profile-audit` | Аудит профілю (2026) + банер-бриф + Featured-план, прив'язані до стратегії | ✅ v0.3.0 |
-| `03-research` | Щотижневий research layer (Fathom + власний потік + outliers + коменти + TikTok + Reddit) → Idea Pool | ✅ v0.2.1 |
+| `03-research` | Щотижневий research layer (Fathom + власний потік + LinkedIn + коменти + TikTok + Reddit) → Idea Pool | ✅ v0.2.1 |
 | `04-weekly-plan` | Тижневий рекомендатор: 2–3 scored варіанти на слот → Notion + Telegram → затвердження | ✅ v0.4.0 |
 | `05-creative` | Креативи: каруселі (7-блочна), інфографіки, single image — роутер над дизайн-скілами | ✅ v0.6.0 |
 | `06-write` | Пост під креатив: голос → хук → фреймворк → humanize (роутер над linkedin-post-writing) | ✅ v0.7.0 |
