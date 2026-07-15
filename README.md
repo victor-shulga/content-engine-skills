@@ -31,7 +31,7 @@ Claude Code plugin: системний LinkedIn-контент для B2B-фау
 | `03-research` | Щотижневий research layer (Fathom + власний потік + LinkedIn + коменти + TikTok + Reddit) → Idea Pool | ✅ v0.2.1 |
 | `04-weekly-plan` | Тижневий рекомендатор: 2–3 scored варіанти на слот → Notion + Telegram → затвердження | ✅ v0.4.0 |
 | `05-creative` | Креативи: каруселі (7-блочна), інфографіки, single image — роутер над дизайн-скілами | ✅ v0.6.0 |
-| `06-write` | Пост під креатив: голос → хук → фреймворк → humanize (роутер над linkedin-post-writing) | ✅ v0.7.0 |
+| `06-write` | Пост під креатив: голос → хук → фреймворк → humanize → **grade gate** (сліпий суддя, рубрика, loop до ≥90) | ✅ v0.8.0 |
 | `07-repurpose` | Переможці (топ за рік / Posts DB) → переробка в нові формати/кути → Idea Pool | ✅ v0.8.0 |
 | `08-engage` | Комент-радар: свіжі пости ICP/peers/infl → драфти коментарів → Telegram (ручний постинг) | ✅ v0.9.0 |
 
@@ -44,6 +44,7 @@ Claude Code plugin: системний LinkedIn-контент для B2B-фау
 - `reference/strategy-template.md` — канон стратегії (10 секцій)
 - `reference/hook-bank.md` — правила хуків, 8 типів × 40 зразків, 9 шаблонів, скоринг
 - `reference/notion-schema.md` — Idea Pool / Weekly Plans / Posts DB
+- `reference/grader-rubric.md` — QA-гейт драфту (сліпий суддя, 100-бальна рубрика, loop-until-gate); калібрується з winners/flops
 
 ## Встановлення
 
@@ -58,4 +59,4 @@ Claude Code plugin: системний LinkedIn-контент для B2B-фау
 bash scripts/validate.sh
 ```
 
-MIT © Victor Shulga
+MIT © Victor Shulga / Victor Shulga

@@ -20,7 +20,7 @@ Content Engine                      ← головна сторінка (workspa
 | Property | Тип | Значення |
 |---|---|---|
 | Name | title | робоча назва ідеї (1 рядок) |
-| Client | select | (your client names) |
+| Client | select | Acme, Northwind, … |
 | Pillar | select | з секції 7 стратегії клієнта |
 | Funnel | select | TOFU / MOFU / BOFU |
 | Format | select | text-only / single image / carousel / infographic / lead magnet / video |
@@ -57,6 +57,8 @@ Body сторінки плану: таблиця слотів — день · fu
 | Client | select | |
 | Idea | relation | → Idea Pool |
 | Pillar / Funnel / Format | select | копія на момент публікації |
+| Grader score | number | фінальний total сліпого судді при написанні (06-write крок 8); гейт = ≥ 90 |
+| Grader iterations | number | скільки раундів loop до взяття гейта (1 = взяв з першого) |
 | Posted date | date | |
 | Post URL | url | |
 | Impressions / Likes / Comments / Reposts | number | тижневий інжест (трекінг-тул) |
