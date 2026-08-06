@@ -1,5 +1,5 @@
 ---
-name: run
+name: content-run
 description: Orchestrator of the Content Engine flow. Routes to the right step — strategy, profile audit, research, weekly plan, production, creatives, tracking — keeps per-client state in Notion, and explains the flow. Use when the user says запусти content engine, контент движок, next content step, or asks what the content engine flow is.
 argument-hint: "[client] [step]"
 ---

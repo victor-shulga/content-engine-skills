@@ -36,7 +36,7 @@ Claude Code plugin: системний LinkedIn-контент для B2B-фау
 | `08-engage` | Комент-радар: свіжі пости ICP/peers/infl → драфти коментарів → Telegram (ручний постинг) | ✅ v0.9.0 |
 
 Трекінг (метрики → Posts DB → дашборд + рециркуляція) винесено в окремий тул `linkedin-tracking`.
-| `run` | Оркестратор | ✅ |
+| `content-run` | Оркестратор | ✅ |
 
 ## Reference
 
