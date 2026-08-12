@@ -5,7 +5,7 @@
 #   - frontmatter `name:` not matching its folder
 #   - step numbers in H1 / "Step N" / Notion sub-page titles drifting from the folder
 #   - gaps or duplicates in the 01..NN sequence
-#   - a step folder that the `run` orchestrator forgot to wire in
+#   - a step folder that the `content-run` orchestrator forgot to wire in
 #   - YAML-risky descriptions (leading quote / embedded `"` / `: `) — break frontmatter parse
 #   - version skew between plugin.json and marketplace.json; invalid JSON
 #
@@ -107,16 +107,18 @@ if nums:
     dups = sorted({f"{n:02d}" for n in nums if nums.count(n) > 1})
     if missing: warn(f"sequence gap: step(s) {missing} not built yet (ok if on roadmap)")
     if dups:    err(f"sequence duplicate step number(s) {dups}")
-if not os.path.isdir(os.path.join(ROOT, "skills", "run")):
-    err("missing orchestrator skill: skills/run")
+ORCH = next((n for n in ("content-run", "run")
+             if os.path.isdir(os.path.join(ROOT, "skills", n))), None)
+if ORCH is None:
+    err("missing orchestrator skill: skills/content-run (or legacy skills/run)")
 
-# ---------- 4. Orchestrator wiring: run/ must reference every numbered step ----------
-run_md = os.path.join(ROOT, "skills", "run", "SKILL.md")
+# ---------- 4. Orchestrator wiring: content-run/ must reference every numbered step ----------
+run_md = os.path.join(ROOT, "skills", ORCH or "content-run", "SKILL.md")
 if os.path.isfile(run_md):
     run_txt = open(run_md, encoding="utf-8").read()
     for num, folder in numbered:
         if f"content-engine:{folder}" not in run_txt and folder not in run_txt:
-            err(f"run/SKILL.md does not reference step '{folder}'")
+            err(f"{ORCH}/SKILL.md does not reference step '{folder}'")
 
 # ---------- report ----------
 print(f"Checked {len(skill_dirs)} skills ({len(numbered)} numbered steps + run).")

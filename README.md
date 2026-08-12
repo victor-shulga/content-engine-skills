@@ -33,7 +33,7 @@ Claude Code plugin: системний LinkedIn-контент для B2B-фау
 | `05-creative` | Креативи: каруселі (7-блочна), інфографіки, single image — роутер над дизайн-скілами | ✅ v0.6.0 |
 | `06-write` | Пост під креатив: голос → хук → фреймворк → humanize → **grade gate** (сліпий суддя, рубрика, loop до ≥90) | ✅ v0.8.0 |
 | `07-repurpose` | Переможці (топ за рік / Posts DB) → переробка в нові формати/кути → Idea Pool | ✅ v0.8.0 |
-| `08-engage` | Комент-радар: свіжі пости ICP/peers/infl → драфти коментарів → Telegram (ручний постинг) | ✅ v0.9.0 |
+| `08-engage` | Комент-радар у 3 режимах: `targets` (4 аудиторії зі стратегії → boolean-пошук → список профілів) · `radar` (свіжі пости → відбір → драфти коментарів) · `log` (факт + комент-майнінг назад у research). Постинг завжди ручний | ✅ v0.10.0 |
 
 Трекінг (метрики → Posts DB → дашборд + рециркуляція) винесено в окремий тул `linkedin-tracking`.
 | `content-run` | Оркестратор | ✅ |
@@ -44,6 +44,7 @@ Claude Code plugin: системний LinkedIn-контент для B2B-фау
 - `reference/strategy-template.md` — канон стратегії (10 секцій)
 - `reference/hook-bank.md` — правила хуків, 8 типів × 40 зразків, 9 шаблонів, скоринг
 - `reference/notion-schema.md` — Idea Pool / Weekly Plans / Posts DB
+- `reference/engage-playbook.md` — комент-радар: 4 аудиторії, boolean-рецепти, драбина каналів пошуку, гейти відбору поста, 7 типів коментарів, гейт якості
 - `reference/grader-rubric.md` — QA-гейт драфту (сліпий суддя, 100-бальна рубрика, loop-until-gate); калібрується з winners/flops
 
 ## Встановлення
