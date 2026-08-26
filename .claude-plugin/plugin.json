@@ -1,19 +1,21 @@
 {
   "name": "content-engine",
-  "version": "0.10.0",
-  "description": "LinkedIn content engine for B2B founders and their clients. From a person LinkedIn + company site: build a machine-readable LinkedIn strategy in Notion (ICP, voice profile, pillars), audit the profile, run a weekly research+recommendation loop, then creative-first voice-true production. Tracking lives in a separate tool. Outputs to Notion in Ukrainian.",
+  "version": "0.11.0",
+  "description": "LinkedIn content engine for B2B founders and their clients. From a person LinkedIn + company site: build a machine-readable LinkedIn strategy in Notion (ICP, voice profile, pillars), audit the profile, run a weekly research+recommendation loop, then creative-first voice-true production. Tracking closes the loop in step 09 — metrics land in the Posts DB and calibrated weights go back into the client strategy. Outputs to Notion in Ukrainian.",
   "author": {
     "name": "Viktor Shulha",
     "url": "https://github.com/victor-shulga"
   },
   "keywords": [
-    "linkedin",
-    "content",
-    "social-selling",
+    "analytics",
     "b2b",
-    "notion",
-    "voice-profile",
+    "content",
     "content-pillars",
+    "linkedin",
+    "notion",
+    "social-selling",
+    "tracking",
+    "voice-profile",
     "weekly-plan"
   ],
   "license": "MIT",
@@ -21,7 +23,7 @@
     "linkedin_li_at": {
       "type": "string",
       "title": "LinkedIn li_at cookie",
-      "description": "LinkedIn session cookie (li_at). Optional and NOT required by any step — research uses no-cookie actors, 08-engage works off the live browser session (Sales Navigator search plus notifications) or no-cookie Apify actors. Only set it if you deliberately want cookie-based Apify actors for bulk Sales Navigator exports. Creator analytics with impressions belongs to the separate tracking tool.",
+      "description": "LinkedIn session cookie (li_at). Optional and NOT required by any step — research uses no-cookie actors, 08-engage works off the live browser session (Sales Navigator search plus notifications) or no-cookie Apify actors. Only set it if you deliberately want cookie-based Apify actors for bulk Sales Navigator exports. Creator analytics with impressions never comes from a cookie or an API — 09-track reads the AggregateAnalytics export the author downloads by hand.",
       "sensitive": true
     }
   },

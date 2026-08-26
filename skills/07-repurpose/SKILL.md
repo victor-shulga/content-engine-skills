@@ -17,7 +17,10 @@ argument-hint: "[client] [--backfill | --from-tracking] [--top=30]"
 1. **Переможці:**
    - *backfill* — Apify `apimaestro/linkedin-profile-posts` (no-cookie), топ за engagement
      (reactions + 2×comments) за рік; візьми топ `--top` (дефолт 30).
-   - *from-tracking* — Posts DB: `Performance tier` ∈ {gem, strong}, `Recycle eligible` = true.
+   - *from-tracking* — Posts DB (наповнює `09-track`): `Performance tier` ∈ {gem, strong},
+     `Recycle eligible` = true. Пріоритет — квадрант 🎯 «тихий лідоген» (мало охоплення, але дав
+     діалоги): переробка сильнішого формату дає найбільше. 📣 «охоплення без заявок» не множимо
+     форматом — переписуємо кут під ICP. Posts DB порожній → скажи прямо і йди в `--backfill`.
 2. **Стратегія (Notion):** пілари (мапити переробку), voice, офер-драбина (спотити lead-magnet
    кандидатів), факти-патрони.
 3. **Правила рециркуляції:** `${CLAUDE_PLUGIN_ROOT}/reference/methodology.md` §2.5а (8 кутів),
@@ -32,7 +35,8 @@ argument-hint: "[client] [--backfill | --from-tracking] [--top=30]"
 - **Score клітинки = round(100 × format_mult × angle_weight × validated_factor):**
   - `format_mult` (van der Blom 2026 ER): карусель/документ **1.0** · лід-магніт **0.95** (giveaway-lever)
     · інфографіка **0.9** · newsletter **0.6** · single image **0.55** · крос-пост **0.5**.
-  - `angle_weight` — viral lever, **калібрований на даних автора** (у Viktor personal/vulnerability б'є
+  - `angle_weight` — viral lever, **калібрований на даних автора** (`09-track --mode=calibrate`,
+    Секція 7 стратегії) (у Viktor personal/vulnerability б'є
     теорію): підбирай ваги під ДНК конкретного переможця (для personal-winner: Personal 1.0,
     Lessons/Mistakes 0.9, How-I 0.8, Listicle 0.65, Case 0.6, Villain 0.55).
   - `validated_factor` — перформанс-перцентиль оригіналу (топ-1 ≈ 0.95).

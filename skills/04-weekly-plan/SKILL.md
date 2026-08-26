@@ -16,10 +16,11 @@ argument-hint: "[client] [week-start YYYY-MM-DD]"
 ## Читаємо
 
 1. **Стратегія (Notion `🧭 {Client} · Strategy`):** Секція 4 — пілари (funnel, день), ритм
-   (N постів/тиждень, дні); Секція 7 — viral levers (ваги, відкалібровані трекінг-тулом); Секція 6 — voice.
+   (N постів/тиждень, дні); Секція 7 — viral levers (ваги, відкалібровані `09-track`; нема калібрування → дефолти methodology §5); Секція 6 — voice.
 2. **Idea Pool (`${CLAUDE_PLUGIN_ROOT}/reference/notion-schema.md`):** усі картки
    `Status` ∈ {new, recommended}, з pillar/funnel/format/hook/competence/score/source/Last used.
-3. **Posts DB (якщо трекінг-тул вже працює):** performance-пріори по піларах/темах/форматах — вага в скор.
+3. **Posts DB (наповнює `09-track`):** performance-пріори по піларах/темах/форматах/кутах — вага в скор.
+   Пріорів ще нема (мало даних) → скор іде на дефолтах, і це проговорюється в раціонале.
 4. **Правила:** `${CLAUDE_PLUGIN_ROOT}/reference/methodology.md` §2.5 (ритм), §2.6 (рециркуляція),
    §4 (distribution каденси).
 
@@ -44,7 +45,8 @@ argument-hint: "[client] [week-start YYYY-MM-DD]"
 
 Ранг кандидата = **базовий Score (Idea Pool)** × коефіцієнти:
 - **viral lever** (вага з Секції 7, відкалібрована на власних даних — у Viktor vulnerability/personal б'є теорію);
-- **performance prior** (Posts DB: цей пілар/тема/формат історично заходив? +/−);
+- **performance prior** (Posts DB: цей пілар/тема/формат/кут історично заходив? +/−; сегменти з n < 4 —
+  сигнал, не вага);
 - **freshness** (call-insight / reddit-pain / свіжий сигнал > matrix-expansion);
 - **balance-penalty**: мінус, якщо тема/кут уже обрані в цьому тижні або були минулого (різноманіття);
 - **competence gate** (нема proof і нема запасної стратегії → відсікти).

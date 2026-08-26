@@ -61,23 +61,28 @@ Body сторінки плану: таблиця слотів — день · fu
 | Grader iterations | number | скільки раундів loop до взяття гейта (1 = взяв з першого) |
 | Posted date | date | |
 | Post URL | url | |
-| Impressions / Likes / Comments / Reposts | number | тижневий інжест (трекінг-тул) |
+| Angle / Lever | select | кут поста — розріз для калібрування (09-track) |
+| Impressions / Likes / Comments / Reposts | number | тижневий інжест (`09-track`); покази лише з AggregateAnalytics XLSX |
+| Measured on | date | дата експорту, з якого взяті числа — покази ростуть, без цієї дати порівняння брехливі |
 | ER % | formula | (likes+comments+reposts)/impressions |
-| Dialogues started | number | ручний інпут або з DM-трекінгу — головний сигнал якості |
+| RI | number | індекс резонансу проти власної медіани (`tracking-rules.md` §4); порожньо = немає даних |
+| Dialogues started | number | ручний інпут або з DM-трекінгу — головний сигнал якості. Порожньо ≠ 0 |
 | Leads / Calls | number | атрибуція, ручний інпут |
-| Performance tier | select | gem (500+ лайків) / strong / baseline / weak |
-| Recycle eligible | formula/checkbox | ≥ 3 міс і tier ≥ strong |
+| Quadrant | select | 💎 самородок / 📣 охоплення без заявок / 🎯 тихий лідоген / ⚪ слабкий (`tracking-rules.md` §5) |
+| Performance tier | select | gem / strong / baseline / weak — рахується від медіани АВТОРА, не від абсолютів (§6) |
+| Recycle eligible | formula/checkbox | tier ≥ strong І вік ≥ 45–60 днів (конверсія формату) або ≥ 90 днів (републіш) |
 
 ## Зв'язки і цикл даних
 
 ```
 research (03) ──┐
 call insights ──┼──> Idea Pool ──> Weekly Plan (04) ──> production (05/06) ──> Posts
-recycle (трекінг)─┘        ↑                                                      │
-                         └────────── score update ← weekly metrics (трекінг) ←───────┘
+recycle (07) ───┘        ↑                                                        │
+                         └── ваги в Секцію 7 ← калібрування (09) ← метрики (09) ←──┘
 ```
 
 - Рекомендатор (04) читає: Idea Pool (Status=new/recommended, пауза по Last used),
-  стратегію клієнта (секції 7–8), Posts (performance prior по піларах/темах).
-- Трекінг-тул пише: метрики у Posts, нові recycle-ідеї в Idea Pool (Source=recycle),
-  оновлені пріори скорів.
+  стратегію клієнта (секції 7–8), Posts (performance prior по піларах/темах/кутах).
+- `09-track` пише: метрики, RI, квадрант і тір у Posts; відкалібровані ваги — у Секцію 7
+  стратегії клієнта (не в reference); переможців — у `07-repurpose`, який кладе recycle-ідеї
+  в Idea Pool (Source=recycle).
