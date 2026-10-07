@@ -43,7 +43,7 @@ if plugin and market:
 
 # ---------- 2. Per-skill SKILL.md checks ----------
 skill_dirs = sorted(d for d in glob.glob(os.path.join(ROOT, "skills", "*")) if os.path.isdir(d))
-numbered = []   # (num:int, folder:str)
+numbered = []   # (step:int|None, folder:str, SKILL.md text)
 for d in skill_dirs:
     folder = os.path.basename(d)
     md = os.path.join(d, "SKILL.md")
@@ -75,32 +75,35 @@ for d in skill_dirs:
         if ': ' in desc:
             err(f"{folder}: description contains ': ' (breaks YAML mapping parse)")
 
-    # numbered-step specific checks
-    nm = re.match(r"^(\d{2})-", folder)
-    if not nm:
+    # flow-step checks. Since 07.10.2026 step folders carry the pack prefix, not a number
+    # (content-intake, ...); the step number lives in the description («Step N of the Content Engine flow»,
+    # the last one may say «Final step of the Content Engine flow»). Numbers are resolved after the loop.
+    sm = re.search(r"\b(?:Step\s+(\d+)|(Final) step)\s+of the Content Engine", re.sub(r"\s+", " ", front))
+    if not sm:
         continue
-    num = int(nm.group(1))
-    numbered.append((num, folder))
+    if not folder.startswith("content-"):
+        err(f"{folder}: flow step folder must start with 'content-'")
+    if re.match(r"^\d{2}-", folder):
+        err(f"{folder}: numbered folder names were retired 07.10.2026 — use 'content-<name>'")
+    numbered.append((int(sm.group(1)) if sm.group(1) else None, folder, txt))
 
+# resolve «Final step» to the number after the highest explicit step
+explicit = [n for n, _, _ in numbered if n is not None]
+numbered = [(n if n is not None else (max(explicit, default=0) + 1), f, x) for n, f, x in numbered]
+for num, folder, txt in numbered:
     # H1 like "# 06 · Positioning"
     h1 = re.search(r"^#\s+(\d{2})\s+·", txt, re.M)
     if not h1:
         warn(f"{folder}: no '# NN ·' H1 heading found")
     elif int(h1.group(1)) != num:
-        err(f"{folder}: H1 number {h1.group(1)} != folder {nm.group(1)}")
-
-    # "Step N of the Content Engine" in description must match
-    sm = re.search(r"Step\s+(\d+)\s+of the Content Engine", desc)
-    if sm and int(sm.group(1)) != num:
-        err(f"{folder}: description says 'Step {sm.group(1)}' but folder is {num}")
-
+        err(f"{folder}: H1 number {h1.group(1)} != step {num} from the description")
     # Notion sub-page title: first «NN · ...» must match the step number
     nt = re.search(r"«(\d{2})\s+·", txt)
     if nt and int(nt.group(1)) != num:
-        err(f"{folder}: Notion sub-page title «{nt.group(1)} ·…» != folder {nm.group(1)}")
+        err(f"{folder}: Notion sub-page title «{nt.group(1)} ·…» != step {num}")
 
 # ---------- 3. Sequence integrity ----------
-nums = sorted(n for n, _ in numbered)
+nums = sorted(n for n, _, _ in numbered)
 if nums:
     expected = list(range(1, max(nums) + 1))
     missing = [f"{n:02d}" for n in expected if n not in nums]
@@ -116,12 +119,12 @@ if ORCH is None:
 run_md = os.path.join(ROOT, "skills", ORCH or "content-run", "SKILL.md")
 if os.path.isfile(run_md):
     run_txt = open(run_md, encoding="utf-8").read()
-    for num, folder in numbered:
+    for num, folder, _ in numbered:
         if f"content-engine:{folder}" not in run_txt and folder not in run_txt:
             err(f"{ORCH}/SKILL.md does not reference step '{folder}'")
 
 # ---------- report ----------
-print(f"Checked {len(skill_dirs)} skills ({len(numbered)} numbered steps + run).")
+print(f"Checked {len(skill_dirs)} skills ({len(numbered)} flow steps + run).")
 for w in warns:
     print(f"  WARN  {w}")
 if errors:

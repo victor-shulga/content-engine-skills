@@ -1,5 +1,5 @@
 ---
-name: 03-research
+name: content-research
 description: Step 3 of the Content Engine flow. Weekly research layer that refills the Idea Pool from six sources — call transcripts (Fathom), the author own work-stream, LinkedIn topic-cluster outliers (Apify), comment mining, TikTok viral trends, and Reddit pain-mining. Applies the 3-criteria gate, dedupes against the pool, tags pillar/funnel/hook/competence, scores, and writes Status=new ideas to Notion. Use when the user says запусти ресерч, research layer, наповни idea pool, знайди ідеї для контенту, or it is the weekly research run.
 argument-hint: "[client] [--source=fathom|work|outliers|comments|tiktok|reddit|all] [--since=7d]"
 ---
@@ -7,7 +7,7 @@ argument-hint: "[client] [--source=fathom|work|outliers|comments|tiktok|reddit|a
 # 03 · Research — наповнення Idea Pool
 
 Третій крок Content Engine. **Не вигадує теми з повітря** — тягне сире з 4 джерел за період,
-проганяє через гейт, дедуплікує і пише ідеї в Idea Pool. Далі 04-weekly-plan вибирає з пулу.
+проганяє через гейт, дедуплікує і пише ідеї в Idea Pool. Далі content-weekly-plan вибирає з пулу.
 
 **Вхід:** `$ARGUMENTS` — клієнт (дефолт — єдиний активний), опц. `--source` (дефолт `all`),
 опц. `--since` (дефолт `7d`). Структурований вхід/вихід — щоб n8n міг викликати крок через SDK.
@@ -40,12 +40,12 @@ Fathom URL (внутрішній, не для поста).
 Аналог «internal Slack» для solo. Джерела: daily-логи, свіжа Notion-робота, Claude-сесії
 (як побудова цього engine), фінмоделі, GTM-деліверабли (анонімно). Витягни «ось що я зараз
 будую/роблю» → теми П3 (AI/Claude) і П4 (personal). `Source = own-thought`.
-⚠️ Тег П4 Personal ставиться лише темам, що проходять Personal-тест (див. `04-weekly-plan` Крок 1): робочий
+⚠️ Тег П4 Personal ставиться лише темам, що проходять Personal-тест (див. `content-weekly-plan` Крок 1): робочий
 кейс у першій особі (ціна, воркшоп, метрика, інструмент) — це П1/П3, не Personal.
 
 ### C · LinkedIn-аутлаєри в кластері (Apify, no-cookie — нуль ризику для акаунта)
 Два режими, ОБИДВА без cookie/логіну (акаунт автора не ризикує; li_at НЕ потрібен — його
-лишаємо для трекінг-тулу / 08-engage):
+лишаємо для трекінг-тулу / content-engage):
 - **C1 · По креаторах (watchlist):** `apimaestro/linkedin-profile-posts` по кожному профілю
   watchlist → 5x+ аутлаєри vs медіана креатора. (той самий актор, що тягнув 50 постів
   van der Blom — 100% success). Можна через скіл `viral-research`.

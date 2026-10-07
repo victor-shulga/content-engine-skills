@@ -10,7 +10,7 @@ Content Engine                      ← головна сторінка (workspa
 └── 📊 Posts                        ← DB: опубліковані пости + метрики
 ```
 
-Перший запуск `01-strategy` створює головну сторінку і DB, якщо їх нема. ID сторінок/data sources
+Перший запуск `content-linkedin-strategy` створює головну сторінку і DB, якщо їх нема. ID сторінок/data sources
 після створення записати у `MEMORY.md` проєкту (щоб не шукати щоразу).
 
 ---
@@ -57,12 +57,12 @@ Body сторінки плану: таблиця слотів — день · fu
 | Client | select | |
 | Idea | relation | → Idea Pool |
 | Pillar / Funnel / Format | select | копія на момент публікації |
-| Grader score | number | фінальний total сліпого судді при написанні (06-write крок 8); гейт = ≥ 90 |
+| Grader score | number | фінальний total сліпого судді при написанні (content-write крок 8); гейт = ≥ 90 |
 | Grader iterations | number | скільки раундів loop до взяття гейта (1 = взяв з першого) |
 | Posted date | date | |
 | Post URL | url | |
-| Angle / Lever | select | кут поста — розріз для калібрування (09-track) |
-| Impressions / Likes / Comments / Reposts | number | тижневий інжест (`09-track`); покази лише з AggregateAnalytics XLSX |
+| Angle / Lever | select | кут поста — розріз для калібрування (content-track) |
+| Impressions / Likes / Comments / Reposts | number | тижневий інжест (`content-track`); покази лише з AggregateAnalytics XLSX |
 | Measured on | date | дата експорту, з якого взяті числа — покази ростуть, без цієї дати порівняння брехливі |
 | ER % | formula | (likes+comments+reposts)/impressions |
 | RI | number | індекс резонансу проти власної медіани (`tracking-rules.md` §4); порожньо = немає даних |
@@ -83,6 +83,6 @@ recycle (07) ───┘        ↑                                            
 
 - Рекомендатор (04) читає: Idea Pool (Status=new/recommended, пауза по Last used),
   стратегію клієнта (секції 7–8), Posts (performance prior по піларах/темах/кутах).
-- `09-track` пише: метрики, RI, квадрант і тір у Posts; відкалібровані ваги — у Секцію 7
-  стратегії клієнта (не в reference); переможців — у `07-repurpose`, який кладе recycle-ідеї
+- `content-track` пише: метрики, RI, квадрант і тір у Posts; відкалібровані ваги — у Секцію 7
+  стратегії клієнта (не в reference); переможців — у `content-repurpose`, який кладе recycle-ідеї
   в Idea Pool (Source=recycle).

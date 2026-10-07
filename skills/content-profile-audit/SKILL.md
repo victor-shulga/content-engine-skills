@@ -1,5 +1,5 @@
 ---
-name: 02-profile-audit
+name: content-profile-audit
 description: Step 2 of the Content Engine flow. Audit a person LinkedIn profile against the 2026 optimization framework AND the client strategy, then propose concrete rewrites per section plus a banner design brief and a Featured-section plan. Use when the user asks to audit a LinkedIn profile, оптимізувати профіль, аудит профілю, покращити банер / Featured / хедлайн, or prepare a profile to convert visitors.
 argument-hint: "<person-linkedin-url> [client]"
 ---
@@ -20,7 +20,7 @@ argument-hint: "<person-linkedin-url> [client]"
    Реюз скіла `29-linkedin-profile-audit` для механічного аудиту, якщо доступний.
 2. **Стратегія клієнта (Notion):** ICP, value prop, signature concept, офер-драбина, voice,
    факти-патрони — це те, на ЩО профіль має конвертувати. Без стратегії спершу запропонуй
-   запустити `content-engine:01-strategy`.
+   запустити `content-engine:content-linkedin-strategy`.
 
 ## Аудит (по 8 секціях методички)
 

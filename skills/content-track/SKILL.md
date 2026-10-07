@@ -1,14 +1,14 @@
 ---
-name: 09-track
-description: Step 9 of the Content Engine flow. The tracking loop that closes the compound cycle — ingests LinkedIn analytics exports into the post archive and the Posts DB, scores every post on two axes (resonance against the author own median, and dialogues started), tags winners as gem or strong so 07-repurpose can run from tracking, and once a month calibrates pillar, format and angle weights back into the client strategy that the weekly recommender reads. Use when the user says трекінг, інжест метрик, як зайшли пости, що спрацювало, оновити дашборд, відкалібруй ваги, track posts, ingest analytics, or it is the weekly metrics run.
+name: content-track
+description: Step 9 of the Content Engine flow. The tracking loop that closes the compound cycle — ingests LinkedIn analytics exports into the post archive and the Posts DB, scores every post on two axes (resonance against the author own median, and dialogues started), tags winners as gem or strong so content-repurpose can run from tracking, and once a month calibrates pillar, format and angle weights back into the client strategy that the weekly recommender reads. Use when the user says трекінг, інжест метрик, як зайшли пости, що спрацювало, оновити дашборд, відкалібруй ваги, track posts, ingest analytics, or it is the weekly metrics run.
 argument-hint: "[client] [--mode=ingest|score|calibrate] [--metrics=<xlsx...>] [--since=YYYY-MM-DD]"
 ---
 
 # 09 · Track — метрики → пріори
 
-Дев'ятий крок і **замикання циклу**. Без нього рекомендатор скорить наосліп, а `07-repurpose`
+Дев'ятий крок і **замикання циклу**. Без нього рекомендатор скорить наосліп, а `content-repurpose`
 не має звідки взяти переможців. Логіка проста: опубліковані пости → числа → тіри → ваги назад
-у стратегію, яку читає `04-weekly-plan`.
+у стратегію, яку читає `content-weekly-plan`.
 
 | Режим | Що робить | Каденс |
 |---|---|---|
@@ -39,13 +39,13 @@ argument-hint: "[client] [--mode=ingest|score|calibrate] [--metrics=<xlsx...>] [
 у звіті це видно окремим рядком.
 
 ### A2 · Прогнати архів
-Скрипт лежить у теці цього скіла: `<тека скіла 09-track>/scripts/build_archive.py`. Запускай
+Скрипт лежить у теці цього скіла: `<тека скіла content-track>/scripts/build_archive.py`. Запускай
 саме його, з робочої теки автора (там чернетки `*.md` і `archive/`):
 ```
-python3 <тека скіла 09-track>/scripts/build_archive.py --root . --metrics <q1.xlsx> <q2.xlsx> --shares Shares.csv --media Rich_Media.csv
+python3 <тека скіла content-track>/scripts/build_archive.py --root . --metrics <q1.xlsx> <q2.xlsx> --shares Shares.csv --media Rich_Media.csv
 ```
 Для `--metrics` потрібен `openpyxl` (`pip install openpyxl`). Шлях до теки скіла визнач
-перед запуском (`find ~ -path "*09-track/scripts/build_archive.py" 2>/dev/null`) і покажи
+перед запуском (`find ~ -path "*content-track/scripts/build_archive.py" 2>/dev/null`) і покажи
 користувачу; файл з такою назвою в іншому місці не запускай.
 Скрипт зливає джерела за share id, **ручну класифікацію не чіпає** (кут, рубрика, теми, формат,
 воронка). Вихід — `archive/posts.jsonl` + індекс `ANGLES.md`.
@@ -75,7 +75,7 @@ python3 <тека скіла 09-track>/scripts/build_archive.py --root . --metri
 3. **Квадрант** (§5) — 💎 самородок · 📣 охоплення без заявок · 🎯 тихий лідоген · ⚪ слабкий.
    Діалоги невідомі → квадрант не ставиться, лише тір по RI з прапорцем.
 4. **Тір і право на рециркуляцію** (§6) → у Posts DB. Це те, що потім читає
-   `07-repurpose --from-tracking`.
+   `content-repurpose --from-tracking`.
 5. **Дайджест** (Telegram, той самий канал, що й тижневий план):
    - топ-3 і флоп-3 тижня з RI й квадрантом;
    - рядок покриття «покази по N з M постів»;
@@ -95,8 +95,8 @@ python3 <тека скіла 09-track>/scripts/build_archive.py --root . --metri
 2. По кожному сегменту — медіанний RI проти загальної медіани, формула ваги й **n-гейт**
    (`tracking-rules.md` §8): n ≥ 4 → вага; n = 2–3 → «сигнал, не висновок»; n ≤ 1 → мовчимо.
 3. Записати в **Секцію 7 стратегії** клієнта таблицю відкаліброваних важелів з `n` і датою.
-   Далі `04-weekly-plan` бере їх автоматично на кроці скору.
-4. Оновити `angle_weight` і `validated_factor` для `07-repurpose`.
+   Далі `content-weekly-plan` бере їх автоматично на кроці скору.
+4. Оновити `angle_weight` і `validated_factor` для `content-repurpose`.
 5. Переможців і провали віддати в `grader-rubric.md` як приклади калібрування судді.
 6. Дефолтну таблицю важелів `methodology.md` §5 **не чіпати** — це стартова гіпотеза для
    нового клієнта, а не місце для даних конкретного.
@@ -111,4 +111,4 @@ python3 <тека скіла 09-track>/scripts/build_archive.py --root . --metri
 - Дайджест показано з рядком покриття; 🎯 тихі лідогени винесені окремо.
 - Дашборд перебудовано й задеплоєно (або сказано, чому пропущено).
 - У режимі калібрування — Секція 7 оновлена тільки по сегментах з n ≥ 4; решта позначена
-  як сигнал; `07-repurpose --from-tracking` після цього має з чого працювати.
+  як сигнал; `content-repurpose --from-tracking` після цього має з чого працювати.

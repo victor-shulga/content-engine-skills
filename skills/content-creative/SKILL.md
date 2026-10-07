@@ -1,6 +1,6 @@
 ---
-name: 05-creative
-description: Step 5 of the Content Engine flow (creative-first). Takes an approved Idea Pool card and produces the visual creative — carousel, infographic, single image, or lead-magnet — in the client brand, routing to the existing design skills. Runs BEFORE the post text (06-write). Use when the user says зроби креатив, креатив для поста, карусель/інфографіка для ідеї, design the creative, or it is the creative step for an approved idea.
+name: content-creative
+description: Step 5 of the Content Engine flow (creative-first). Takes an approved Idea Pool card and produces the visual creative — carousel, infographic, single image, or lead-magnet — in the client brand, routing to the existing design skills. Runs BEFORE the post text (content-write). Use when the user says зроби креатив, креатив для поста, карусель/інфографіка для ідеї, design the creative, or it is the creative step for an approved idea.
 argument-hint: "<idea-name-or-id> [client]"
 ---
 
@@ -34,7 +34,7 @@ argument-hint: "<idea-name-or-id> [client]"
   (хук+цифра, автор-блок, вордмарк).
 - **lead magnet** → робочий темплейт → PDF (не чеклист). Лід-магніт і комент-гейт живуть
   ТІЛЬКИ в четверговому слоті; у решті днів фінал поста — директив.
-- **text-only** → креатив не потрібен: познач і передай одразу в 06-write.
+- **text-only** → креатив не потрібен: познач і передай одразу в content-write.
 - **video** → поза автоматизацією: познач ручний крок.
 
 ## Бренд (інваріант)
@@ -44,11 +44,11 @@ Viktor — білий фон + корал #E85A4F + Inter Tight/Inter + авто
 ## Вихід
 1. Креатив у Figma (+ inline-скріни кожного слайда/візуала для перегляду).
 2. Прикріпити креатив до картки/поста; для каруселі — зберегти драфт контенту слайдів.
-3. Передати в **06-write**: готовий візуал + (для каруселі) контент слайдів, щоб текст писався ПІД нього.
-4. Короткий summary: що зроблено, формат, лінк на Figma, що далі (06-write).
+3. Передати в **content-write**: готовий візуал + (для каруселі) контент слайдів, щоб текст писався ПІД нього.
+4. Короткий summary: що зроблено, формат, лінк на Figma, що далі (content-write).
 
 ## Definition of Done
 - Формат визначено з картки; роутинг відпрацював (або text-only/video коректно пропущено).
 - Креатив у бренді клієнта (Viktor — білий фон+корал; правила інфографіки дотримані).
 - Карусель — рівно 7 блоків, 1 думка/слайд; цифри з фактів-патронів, не вигадані.
-- Креатив прикріплено; передано в 06-write з усім потрібним; summary повернуто.
+- Креатив прикріплено; передано в content-write з усім потрібним; summary повернуто.

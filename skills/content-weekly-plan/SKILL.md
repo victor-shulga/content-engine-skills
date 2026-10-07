@@ -1,5 +1,5 @@
 ---
-name: 04-weekly-plan
+name: content-weekly-plan
 description: Step 4 of the Content Engine flow. The weekly recommender — the heart of the system. Reads the client strategy (pillars, rhythm) and the Idea Pool, resolves this week's slots, and recommends 2-3 scored idea options per slot with a rationale, so the user approves a week in ~5 minutes instead of suffering a rigid calendar. Writes a Weekly Plan to Notion + a Telegram digest. Use when the user says тижневий план, weekly plan, що постити цього тижня, склади план на тиждень, or it is the weekly planning run.
 argument-hint: "[client] [week-start YYYY-MM-DD]"
 ---
@@ -16,10 +16,10 @@ argument-hint: "[client] [week-start YYYY-MM-DD]"
 ## Читаємо
 
 1. **Стратегія (Notion `🧭 {Client} · Strategy`):** Секція 4 — пілари (funnel, день), ритм
-   (N постів/тиждень, дні); Секція 7 — viral levers (ваги, відкалібровані `09-track`; нема калібрування → дефолти methodology §5); Секція 6 — voice.
+   (N постів/тиждень, дні); Секція 7 — viral levers (ваги, відкалібровані `content-track`; нема калібрування → дефолти methodology §5); Секція 6 — voice.
 2. **Idea Pool (`${CLAUDE_PLUGIN_ROOT}/reference/notion-schema.md`):** усі картки
    `Status` ∈ {new, recommended}, з pillar/funnel/format/hook/competence/score/source/Last used.
-3. **Posts DB (наповнює `09-track`):** performance-пріори по піларах/темах/форматах/кутах — вага в скор.
+3. **Posts DB (наповнює `content-track`):** performance-пріори по піларах/темах/форматах/кутах — вага в скор.
    Пріорів ще нема (мало даних) → скор іде на дефолтах, і це проговорюється в раціонале.
 4. **Правила:** `${CLAUDE_PLUGIN_ROOT}/reference/methodology.md` §2.5 (ритм), §2.6 (рециркуляція),
    §4 (distribution каденси).
@@ -51,7 +51,7 @@ argument-hint: "[client] [week-start YYYY-MM-DD]"
 Для кожного слоту фільтруй Idea Pool: `Pillar` = пілар слоту · `Funnel` сумісний · `Status` ∈
 {new, recommended} · **пауза реюзу**: `Last used` порожній або > 1-3 міс · формат сумісний зі слотом
 (або гнучкий). Якщо для слоту < 2 кандидатів — прапор «пул бідний на {пілар}», запропонуй
-`content-engine:03-research --source=...` або matrix-expansion fill.
+`content-engine:content-research --source=...` або matrix-expansion fill.
 
 ## Крок 3 · Скор і ранжування → топ 2-3
 
@@ -71,7 +71,7 @@ argument-hint: "[client] [week-start YYYY-MM-DD]"
 
 1. **Про що пост** (3–6 речень) — теза, що конкретно всередині тіла (кроки / розбір / порівняння /
    що зробили), і чим це відрізняється від сусідніх карток. Це головний блок: його одного має
-   вистачати, щоб віддати варіант у `05-creative` → `06-write` без додаткових пояснень.
+   вистачати, щоб віддати варіант у `content-creative` → `content-write` без додаткових пояснень.
 2. **Цифри в тілі** — конкретні числа-патрони, які підуть у пост (без них Вт не виходить взагалі).
 3. **Кінцівка** — 1–2 речення, афористичний висновок у голосі автора (Секція 6 стратегії).
 4. **Чому саме зараз** — 1 рядок: який lever тягне, чому свіже/на часі, який proof підкріплює,
@@ -92,7 +92,7 @@ argument-hint: "[client] [week-start YYYY-MM-DD]"
 
 Користувач позначає вибір (у Notion-колонці «Вибір» або відповіддю). На наступному виклику /
 по команді: вибрані ідеї → `Status = approved` в Idea Pool (решта лишаються `recommended`);
-план → `Status = approved`. Далі 05-creative → 06-write беруть `approved` по слотах.
+план → `Status = approved`. Далі content-creative → content-write беруть `approved` по слотах.
 
 ## Definition of Done
 

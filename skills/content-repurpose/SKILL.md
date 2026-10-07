@@ -1,5 +1,5 @@
 ---
-name: 07-repurpose
+name: content-repurpose
 description: Step 7 of the Content Engine flow. Mines the author's best-performing posts (backfill of the year's top 30-50, or recent winners from the Posts DB) and proposes how to rebuild each winner into other formats and angles, writing recycle ideas into the Idea Pool. A winning post is a validated idea — repurposing it is the highest-EV content move. Use when the user says перевикористати пости, repurpose, що з топ-постів зробити, найкращі пости за рік, recycle winners, or it is the monthly repurpose run.
 argument-hint: "[client] [--backfill | --from-tracking] [--top=30]"
 ---
@@ -17,7 +17,7 @@ argument-hint: "[client] [--backfill | --from-tracking] [--top=30]"
 1. **Переможці:**
    - *backfill* — Apify `apimaestro/linkedin-profile-posts` (no-cookie), топ за engagement
      (reactions + 2×comments) за рік; візьми топ `--top` (дефолт 30).
-   - *from-tracking* — Posts DB (наповнює `09-track`): `Performance tier` ∈ {gem, strong},
+   - *from-tracking* — Posts DB (наповнює `content-track`): `Performance tier` ∈ {gem, strong},
      `Recycle eligible` = true. Пріоритет — квадрант 🎯 «тихий лідоген» (мало охоплення, але дав
      діалоги): переробка сильнішого формату дає найбільше. 📣 «охоплення без заявок» не множимо
      форматом — переписуємо кут під ICP. Posts DB порожній → скажи прямо і йди в `--backfill`.
@@ -35,7 +35,7 @@ argument-hint: "[client] [--backfill | --from-tracking] [--top=30]"
 - **Score клітинки = round(100 × format_mult × angle_weight × validated_factor):**
   - `format_mult` (van der Blom 2026 ER): карусель/документ **1.0** · лід-магніт **0.95** (giveaway-lever)
     · інфографіка **0.9** · newsletter **0.6** · single image **0.55** · крос-пост **0.5**.
-  - `angle_weight` — viral lever, **калібрований на даних автора** (`09-track --mode=calibrate`,
+  - `angle_weight` — viral lever, **калібрований на даних автора** (`content-track --mode=calibrate`,
     Секція 7 стратегії) (у Viktor personal/vulnerability б'є
     теорію): підбирай ваги під ДНК конкретного переможця (для personal-winner: Personal 1.0,
     Lessons/Mistakes 0.9, How-I 0.8, Listicle 0.65, Case 0.6, Villain 0.55).
@@ -50,7 +50,7 @@ argument-hint: "[client] [--backfill | --from-tracking] [--top=30]"
    URL оригіналу · `Last used` = дата оригіналу (щоб працювали паузи) · `Notes` = «що виграло + яка
    переробка (кут×формат, score)» · pillar/funnel/format нової версії · Score з матриці.
 3. **Дайджест:** топ-переможці + матриці; що відсіяно за паузою.
-4. Summary оркестратору (картки готові для 04-weekly-plan).
+4. Summary оркестратору (картки готові для content-weekly-plan).
 
 ## Definition of Done
 - Переможці зібрані (backfill scrape або Posts DB winners); ранжовані за engagement.

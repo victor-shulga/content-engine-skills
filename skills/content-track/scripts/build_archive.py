@@ -814,7 +814,7 @@ def write_index(records):
     lines = [
         "# ANGLES — індекс постів",
         "",
-        f"Постів у архіві: **{len(rows)}**. Перебудова: `python3 <тека скіла 09-track>/scripts/build_archive.py --root .`.",
+        f"Постів у архіві: **{len(rows)}**. Перебудова: `python3 <тека скіла content-track>/scripts/build_archive.py --root .`.",
         "",
         "Читати ПЕРЕД кожним новим постом: шукати збіг теми + кута, щоб не писати дубль.",
         "",

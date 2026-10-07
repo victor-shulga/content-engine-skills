@@ -1,5 +1,5 @@
 ---
-name: 08-engage
+name: content-engage
 description: Step 8 of the Content Engine flow. The comment radar in three modes — targets builds a live list of profiles worth commenting on by extracting the four audiences (ICP, peers, co-pilots, thought leaders) from the LinkedIn strategy and turning each into a boolean search; radar pulls their fresh posts, picks the ones worth a comment and drafts one per post in the author voice; log records what was actually posted and feeds recurring pains back to research. Never auto-comments — drafts only. Use when the user says комент-радар, що прокоментувати, кого коментувати, engage, збери список для коментів, draft comments, or it is the daily engagement run.
 argument-hint: "[client] [--mode=targets|radar|log] [--bucket=icp|peers|copilots|tl] [--slot=morning|midday] [--engine=chrome|apify]"
 ---
@@ -113,7 +113,7 @@ apify: `apimaestro/linkedin-profile-posts` батчем) → пошук по к�
 1. Запитати/прийняти, що з драфтів реально запощено і що відповіли.
 2. Дописати в `engage-state.json → log`: дата · слот · автор · бакет · тип коментаря · posted · reply.
 3. **Комент-майнінг**: повторювані питання, заперечення і болі з постів та гілок → в `mined`
-   і далі в `03-research` як `Source = comment-mining`.
+   і далі в `content-research` як `Source = comment-mining`.
 4. Тижневе зведення: фактичний мікс vs 20/50/15/15 · які типи коментарів дали відповіді ·
    хто з таргетів мовчить 3+ тижні (кандидат на виліт) · де добрати профілів.
 
@@ -124,5 +124,5 @@ apify: `apimaestro/linkedin-profile-posts` батчем) → пошук по к�
   записаний у стан; недобір по бакетах названий вголос.
 - **radar**: драфти пройшли гейти відбору І гейт якості; мікс тижня враховано; кожен драфт —
   з лінком, причиною і готовим текстом для копіпасту.
-- **log**: запощене зафіксовано, дедуп працює, сигнали віддані в `03-research`.
+- **log**: запощене зафіксовано, дедуп працює, сигнали віддані в `content-research`.
 - Жодної дії в акаунті LinkedIn без дозволу — тільки читання і драфти.

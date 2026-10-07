@@ -1,5 +1,5 @@
 ---
-name: 01-strategy
+name: content-linkedin-strategy
 description: Step 1 of the Content Engine flow. Build a machine-readable LinkedIn social selling strategy in Notion from a person LinkedIn profile + company site/LinkedIn — goals/KPI, ICP+persona, enemy+signature, content pillars (no quotas), offer audit for LinkedIn sellability, voice profile, viral levers, distribution playbook, backstory. Use when starting the content engine for a new client, or when the user asks to build a LinkedIn strategy, контент-стратегію, or voice profile for a person.
 argument-hint: "<person-linkedin-url> <company-site-or-linkedin>"
 ---
@@ -39,7 +39,7 @@ argument-hint: "<person-linkedin-url> <company-site-or-linkedin>"
 
 - **Секція 4 (пілари):** 3–5 піларів; кожен прив'язаний до viral lever
   (`${CLAUDE_PLUGIN_ROOT}/reference/methodology.md` §5) і до доказів компетенції, знайдених
-  у п.1. БЕЗ жорстких квот — тільки funnel + день тижня; баланс тримає 04-weekly-plan.
+  у п.1. БЕЗ жорстких квот — тільки funnel + день тижня; баланс тримає content-weekly-plan.
   Якщо у клієнта мало доказів — пілари на запасних стратегіях компетенції (methodology §2.3).
 - **Ритм у Секції 4:** базуйся на methodology §2.5, але підлаштуй під commitment
   (3 пости/тиждень → Пн/Ср/Пт: TOFU-MOFU-BOFU-ротація; 4 → без другого TOFU).

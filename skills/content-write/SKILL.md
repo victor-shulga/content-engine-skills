@@ -1,5 +1,5 @@
 ---
-name: 06-write
+name: content-write
 description: Step 6 of the Content Engine flow. Writes the publish-ready LinkedIn post text UNDER the creative from 05, in the author's voice — runs the writing process, picks the hook, applies the copy framework, humanizes (removes AI traces), formats, attaches the distribution playbook, then runs a blind grade gate (fresh subagent scores the draft against grader-rubric.md, loops until ≥90 & 0 hard-fails). Use when the user says напиши пост, текст під креатив, допиши пост, фіналізуй пост, write the post, or it is the writing step for an idea that already has a creative.
 argument-hint: "<idea-name-or-id> [client]"
 ---
@@ -13,7 +13,7 @@ argument-hint: "<idea-name-or-id> [client]"
 (сліпий суддя по рубриці, крок 8) перед показом.
 
 **Вхід:** `$ARGUMENTS` — ідея (з креативом від 05) + клієнт. Якщо креативу ще нема і формат ≠
-text-only — спершу `content-engine:05-creative`.
+text-only — спершу `content-engine:content-creative`.
 
 ## Що читаємо
 1. **Картка Idea Pool:** hook draft · pillar · funnel · format · competence proof · notes · source.
