@@ -39,9 +39,14 @@ argument-hint: "[client] [--mode=ingest|score|calibrate] [--metrics=<xlsx...>] [
 у звіті це видно окремим рядком.
 
 ### A2 · Прогнати архів
+Скрипт лежить у теці цього скіла: `<тека скіла 09-track>/scripts/build_archive.py`. Запускай
+саме його, з робочої теки автора (там чернетки `*.md` і `archive/`):
 ```
-python3 scripts/build_archive.py --metrics <q1.xlsx> <q2.xlsx> --shares Shares.csv --media Rich_Media.csv
+python3 <тека скіла 09-track>/scripts/build_archive.py --root . --metrics <q1.xlsx> <q2.xlsx> --shares Shares.csv --media Rich_Media.csv
 ```
+Для `--metrics` потрібен `openpyxl` (`pip install openpyxl`). Шлях до теки скіла визнач
+перед запуском (`find ~ -path "*09-track/scripts/build_archive.py" 2>/dev/null`) і покажи
+користувачу; файл з такою назвою в іншому місці не запускай.
 Скрипт зливає джерела за share id, **ручну класифікацію не чіпає** (кут, рубрика, теми, формат,
 воронка). Вихід — `archive/posts.jsonl` + індекс `ANGLES.md`.
 

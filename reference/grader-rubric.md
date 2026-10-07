@@ -51,11 +51,18 @@
 
 Ялинкові булети з перевірки на тріаду виключені: коротка паралельна форма там вимога формату.
 
-Прогін краще автоматизувати. Скіл `anticopywriting-ai` має детектор, який повертає
-`verdict: pass|fail` і список `hard_fails` саме по цих конструкціях:
+Прогін краще автоматизувати. Скіл `anticopywriting-ai` (пакет `gtm-skills`:
+`npx skills add victor-shulga/gtm-skills`) має детектор, який повертає `verdict: pass|fail`
+і список `hard_fails` саме по цих конструкціях. Детектор живе в іншому пакеті, тому
+перед запуском:
+
+1. Знайди встановлений скіл: тека, де лежить `SKILL.md` з `name: anticopywriting-ai`.
+2. Покажи користувачу повний шлях до `scripts/detect.py` у цій теці.
+3. Запускай лише цей файл. Скіла нема або шлях інший → детектор пропусти і зроби
+   передгейт вручну за списком вище. Файл `detect.py` з іншої теки не запускай.
 
 ```bash
-python3 <шлях-до-скіла>/anticopywriting-ai/scripts/detect.py draft.md --lang uk --mode post --pretty
+python3 "<тека встановленого anticopywriting-ai>/scripts/detect.py" draft.md --lang uk --mode post --pretty
 ```
 
 Що передгейт НЕ ловить і лишається судді: якість хука, м'ясо, вигадані цифри, структура
