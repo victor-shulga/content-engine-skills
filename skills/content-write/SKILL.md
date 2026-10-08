@@ -19,7 +19,7 @@ text-only — спершу `content-engine:content-creative`.
 1. **Картка Idea Pool:** hook draft · pillar · funnel · format · competence proof · notes · source.
 2. **Креатив (05):** для каруселі — контент слайдів (текст = лише однорядковий caption); для
    single image / infographic — повний пост під візуал.
-3. **Стратегія (Notion) Секція 6 Voice** + скіл `about-viktor`: тон, signature, фірмові патерни,
+3. **Стратегія (Notion) Секція 6 Voice** + скіл профілю автора, якщо він встановлений (напр. `about-<автор>`): тон, signature, фірмові патерни,
    **«ЩО НІКОЛИ НЕ ПИШЕМО»**.
 4. **Правила:** `${CLAUDE_PLUGIN_ROOT}/reference/hook-bank.md` (хуки) +
    `${CLAUDE_PLUGIN_ROOT}/reference/methodology.md` §3 (фреймворки/структура/форматування), §4 (distribution).

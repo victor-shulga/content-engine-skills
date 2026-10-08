@@ -22,7 +22,7 @@ argument-hint: "<person-linkedin-url> <company-site-or-linkedin>"
    - біографічні факти-«патрони» з числами (для Секції 9).
    Якщо постів нема/мало — позначи «холодний акаунт», voice profile буде [ПРИПУЩЕННЯ]
    з калібруванням на перших 10 постах.
-2. **Компанія:** сайт — через скіли `website-scraper` + `deep-company-analyser` (фолбек:
+2. **Компанія:** сайт — скілом для скрапу сайту, якщо він встановлений (фолбек:
    WebFetch по ключових сторінках; SPA-фолбек: Apify `apify/website-content-crawler`).
    Company-LinkedIn — `scrapemint/linkedin-company-employees-scraper` (headcount, ролі).
 3. **Документи клієнта:** запитай ICP-док і value prop. Є — то першоджерело для Секцій 2, 5.

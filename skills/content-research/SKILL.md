@@ -48,7 +48,7 @@ Fathom URL (внутрішній, не для поста).
 лишаємо для трекінг-тулу / content-engage):
 - **C1 · По креаторах (watchlist):** `apimaestro/linkedin-profile-posts` по кожному профілю
   watchlist → 5x+ аутлаєри vs медіана креатора. (той самий актор, що тягнув 50 постів
-  van der Blom — 100% success). Можна через скіл `viral-research`.
+  van der Blom — 100% success). Якщо встановлено окремий скіл для пошуку вірусних постів, можна через нього.
 - **C2 · По темі (keyword/hashtag search):** `apimaestro/linkedin-posts-search-scraper-no-cookies`
   (keyword) або `harvestapi/linkedin-post-search` (дешевше ~$0.002/пост, багатші фільтри:
   author industry / keywords / mentions) → вірусні пости НА ТЕМУ по всьому LinkedIn, навіть від
