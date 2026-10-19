@@ -73,3 +73,7 @@ bash scripts/validate.sh
 ```
 
 MIT © Victor Shulga / Victor Shulga
+
+---
+
+Built by [Victor Shulga](https://victorshulga.com), Fractional CRO for B2B service companies. Full skill stack: [victorshulga.com/stack](https://victorshulga.com/stack/).
