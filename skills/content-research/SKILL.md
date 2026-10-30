@@ -94,6 +94,33 @@ Fathom URL (внутрішній, не для поста).
    свіжість сигналу. Сигнал з дзвінка/реального болю > matrix-expansion.
 6. **Запис**: `Status = new` у Idea Pool (`notion-schema.md`).
 
+## Terms and plain-language output
+
+<!-- glossary:start terms=idea-pool,outlier-post,competence-proof,content-pillar,tofu-mofu-bofu,hook,idea-source,matrix-expansion,topic-authority,jtbd,viral-lever -->
+Rules for every document a client or their team will read (review, roast, canvas, offer cards, instruction):
+
+1. **Open with «Словник цього документа»**: only the terms that actually appear in it, at most 10, each as «термін: що це простими словами». Like the definitions section of a contract.
+2. **No internal codes or letter scales in the text** (A/B/C, D L T E, BLEND numbers without words, Own/Shared/Generic, Z1.4, GATE 2.5, T1–T6). Write the meaning instead: «є цифра з клієнтом», not «A».
+3. **Use the plain form from the table below.** English stays only for tool names and for copy that ships in English (promises, hooks, subject lines). If the document is in another language, translate the plain form, never the internal term.
+4. **Do not score what cannot exist yet.** A block that depends on work not done (signal catalog, case studies, a previous step) gets «пропущено: спершу потрібно <що саме>», not a score.
+5. **Every section of a review opens with one concrete action** («до наступного дзвінка: …»), then at most five lines of why. No paragraph that only restates the framework.
+
+
+| Internal term (this skill) | Write for the reader | What it means |
+|---|---|---|
+| Idea Pool | банк ідей | Таблиця в Notion з усіма ідеями для постів, з якої щотижня вибирають теми. |
+| outlier, 5x+ outlier | пост, що вистрілив | Пост, який зібрав у 5 і більше разів більше реакцій, ніж зазвичай у цього автора; беремо його як зразок подачі. |
+| competence proof | доказ, що автор у темі | Реальний досвід, цифра чи кейс автора; без нього пост на цю тему не пишемо. |
+| pillar, П1–П4 | тема-опора | Одна з 3–5 постійних тем автора; у документі пишемо назву теми словами, без кодів П1–П4. |
+| TOFU / MOFU / BOFU, funnel | етап воронки: знайомство · інтерес · рішення | Показує, для кого пост: для тих, хто вас ще не знає, хто вже придивляється, або хто готовий купувати. |
+| hook, cold hook | гачок | перший рядок листа, через який людина читає далі |
+| Source = call-insight / own-thought / research-outlier / comment-mining / tiktok-trend / reddit-pain | звідки ідея: дзвінок · власна робота · чужий пост, що вистрілив · коментарі · TikTok · Reddit | Позначка джерела в картці ідеї; у дайджесті пишемо її словами. |
+| matrix-expansion | ідея з таблиці тем | Ідея, складена з комбінації теми й кута без живого сигналу; важить менше за ідею з дзвінка чи реального болю. |
+| Topic Authority, Interest Graph, topic cluster | впізнавана тема автора | LinkedIn показує пости тим, кому цікава тема, тому профіль і пости мають тримати одну тему, яку легко зчитати. |
+| JTBD | задача клієнта | що людина намагається зробити, коли шукає рішення: «коли…, хочу…, щоб…» |
+| viral lever, lever | що змушує реагувати на пост | Причина, через яку люди читають і реагують: особиста історія, суперечлива думка, корисна інструкція тощо. |
+<!-- glossary:end -->
+
 ## Вихід
 
 1. Нові картки в 💡 Idea Pool (data_source — з `notion-schema.md` / пам'яті проєкту).

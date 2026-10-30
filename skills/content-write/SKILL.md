@@ -47,6 +47,23 @@ text-only — спершу `content-engine:content-creative`.
 З `methodology.md` §4: T-20хв коменти кластеру · час · перша година nurture · лінк у body (конверсія)
 або без лінків (охоплення) — НЕ в першому коменті · self-repost 4-6год ×1 · 0 хештегів · saves-CTA.
 
+## Terms and plain-language output
+
+<!-- glossary:start terms=hook,directive-cta,distribution-playbook,grade-gate mode=copy -->
+Rules for every text a reader will see (post, email, message, page copy):
+
+1. **No internal codes or letter scales** (A/B/C, D L T E, scores without words, framework codes). Write the meaning.
+2. **Use the plain form from the table below.** English stays only for tool names and for copy that ships in English. A term the reader may not know gets explained in the same sentence or replaced.
+3. **Any review, audit or report this skill produces for the team or the client** follows the document rules: open it with «Словник цього документа» (terms used, at most 10), do not score what depends on unfinished work, and open each section with one concrete action.
+
+| Internal term (this skill) | Write for the reader | What it means |
+|---|---|---|
+| hook, cold hook | гачок | перший рядок листа, через який людина читає далі |
+| directive CTA | заклик до дії в кінці поста | Пряма команда читачу, що зробити далі; питання в кінці поста не ставимо. |
+| distribution playbook (T-20 min comments, first-hour nurture, self-repost) | план поширення поста | Що робити навколо публікації: коментарі в ніші за 20 хвилин до неї, відповіді в першу годину, один репост через 4–6 годин. |
+| grade gate, grader score, hard fails | сліпа перевірка якості | Окремий оцінювач ставить посту бали зі 100; показуємо від 90 і без жодного грубого порушення. |
+<!-- glossary:end -->
+
 ## Вихід
 1. **Publish-ready пост** (текст + лінк на креатив) — показати користувачу вже ПІСЛЯ взяття гейта; у summary фінальний `total` score.
 2. **Posts DB:** створити чернетку (Name=хук, pillar/funnel/format копія, Idea relation, статус чернетки, `grader_score` = фінальний total, `grader_iterations` = скільки раундів).

@@ -74,11 +74,40 @@ argument-hint: "[client] [week-start YYYY-MM-DD]"
    вистачати, щоб віддати варіант у `content-creative` → `content-write` без додаткових пояснень.
 2. **Цифри в тілі** — конкретні числа-патрони, які підуть у пост (без них Вт не виходить взагалі).
 3. **Кінцівка** — 1–2 речення, афористичний висновок у голосі автора (Секція 6 стратегії).
-4. **Чому саме зараз** — 1 рядок: який lever тягне, чому свіже/на часі, який proof підкріплює,
+4. **Чому саме зараз** — 1 рядок: what makes people react to this post, said in plain words (not the lever name), чому свіже/на часі, який proof підкріплює,
    і які penalty застосовані.
 
 Причина правила (фідбек Viktor 31.08.2026): він скрінить слот і кидає в Claude — а зі скріна
 «заголовок + чому зараз» модель не розуміє, про що писати пост.
+
+## Terms and plain-language output
+
+<!-- glossary:start terms=slot,tofu-mofu-bofu,content-pillar,viral-lever,ranking-factors,competence-proof,idea-pool,hand-raiser,free-hook,comment-gate,directive-cta,build-in-public,fact-cartridges -->
+Rules for every document a client or their team will read (review, roast, canvas, offer cards, instruction):
+
+1. **Open with «Словник цього документа»**: only the terms that actually appear in it, at most 10, each as «термін: що це простими словами». Like the definitions section of a contract.
+2. **No internal codes or letter scales in the text** (A/B/C, D L T E, BLEND numbers without words, Own/Shared/Generic, Z1.4, GATE 2.5, T1–T6). Write the meaning instead: «є цифра з клієнтом», not «A».
+3. **Use the plain form from the table below.** English stays only for tool names and for copy that ships in English (promises, hooks, subject lines). If the document is in another language, translate the plain form, never the internal term.
+4. **Do not score what cannot exist yet.** A block that depends on work not done (signal catalog, case studies, a previous step) gets «пропущено: спершу потрібно <що саме>», not a score.
+5. **Every section of a review opens with one concrete action** («до наступного дзвінка: …»), then at most five lines of why. No paragraph that only restates the framework.
+
+
+| Internal term (this skill) | Write for the reader | What it means |
+|---|---|---|
+| slot | місце в плані тижня | Конкретний день з етапом воронки, темою й форматом, під який підбираємо 2–3 ідеї. |
+| TOFU / MOFU / BOFU, funnel | етап воронки: знайомство · інтерес · рішення | Показує, для кого пост: для тих, хто вас ще не знає, хто вже придивляється, або хто готовий купувати. |
+| pillar, П1–П4 | тема-опора | Одна з 3–5 постійних тем автора; у документі пишемо назву теми словами, без кодів П1–П4. |
+| viral lever, lever | що змушує реагувати на пост | Причина, через яку люди читають і реагують: особиста історія, суперечлива думка, корисна інструкція тощо. |
+| performance prior, freshness, balance-penalty, competence gate | поправки до оцінки ідеї | Оцінку піднімаємо, коли схожі пости раніше заходили і сигнал свіжий, знижуємо, коли тема вже була цього чи минулого тижня. |
+| competence proof | доказ, що автор у темі | Реальний досвід, цифра чи кейс автора; без нього пост на цю тему не пишемо. |
+| Idea Pool | банк ідей | Таблиця в Notion з усіма ідеями для постів, з якої щотижня вибирають теми. |
+| hand raiser | пост, після якого пишуть самі | Пост для тих, хто готовий купувати: просить відгукнутися тих, кому це потрібно зараз. |
+| hook / free offer, lead magnet | безкоштовний вхід | аудит, розрахунок втрат або розбір, що показує проблему і веде до розмови |
+| comment gate, comment-to-get | матеріал за коментар | Читач пише слово в коментарі й отримує матеріал; у плані це можливо лише в четвер. |
+| directive CTA | заклик до дії в кінці поста | Пряма команда читачу, що зробити далі; питання в кінці поста не ставимо. |
+| build-in-public | відкрито про власну справу | Автор показує, що будує і скільки це коштує, з реальними цифрами. |
+| факти-патрони | перевірені цифри автора | Біографічні й робочі цифри з джерелом, які можна ставити в пост і на креатив; інших цифр не вигадуємо. |
+<!-- glossary:end -->
 
 ## Крок 5 · Вихід (Notion + Telegram)
 

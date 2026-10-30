@@ -77,7 +77,7 @@ python3 <тека скіла content-track>/scripts/build_archive.py --root . --
 4. **Тір і право на рециркуляцію** (§6) → у Posts DB. Це те, що потім читає
    `content-repurpose --from-tracking`.
 5. **Дайджест** (Telegram, той самий канал, що й тижневий план):
-   - топ-3 і флоп-3 тижня з RI й квадрантом;
+   - top-3 and bottom-3 posts of the week, each with its resonance said in words (e.g. «у 2,1 раза більше відгуку, ніж зазвичай») and the quadrant name, never a bare RI number;
    - рядок покриття «покази по N з M постів»;
    - 🎯 тихі лідогени окремим блоком — це кандидати на переробку №1;
    - 1–3 рядки «що це означає для наступного тижня» (без нових ваг — ваги ставить режим C).
@@ -112,3 +112,30 @@ python3 <тека скіла content-track>/scripts/build_archive.py --root . --
 - Дашборд перебудовано й задеплоєно (або сказано, чому пропущено).
 - У режимі калібрування — Секція 7 оновлена тільки по сегментах з n ≥ 4; решта позначена
   як сигнал; `content-repurpose --from-tracking` після цього має з чого працювати.
+
+## Terms and plain-language output
+
+<!-- glossary:start terms=resonance-index,engagement-rate,rolling-baseline,post-quadrant,performance-tier,n-gate,weight-calibration,content-pillar,post-angle,viral-lever,repurpose -->
+Rules for every document a client or their team will read (review, roast, canvas, offer cards, instruction):
+
+1. **Open with «Словник цього документа»**: only the terms that actually appear in it, at most 10, each as «термін: що це простими словами». Like the definitions section of a contract.
+2. **No internal codes or letter scales in the text** (A/B/C, D L T E, BLEND numbers without words, Own/Shared/Generic, Z1.4, GATE 2.5, T1–T6). Write the meaning instead: «є цифра з клієнтом», not «A».
+3. **Use the plain form from the table below.** English stays only for tool names and for copy that ships in English (promises, hooks, subject lines). If the document is in another language, translate the plain form, never the internal term.
+4. **Do not score what cannot exist yet.** A block that depends on work not done (signal catalog, case studies, a previous step) gets «пропущено: спершу потрібно <що саме>», not a score.
+5. **Every section of a review opens with one concrete action** («до наступного дзвінка: …»), then at most five lines of why. No paragraph that only restates the framework.
+
+
+| Internal term (this skill) | Write for the reader | What it means |
+|---|---|---|
+| RI, resonance index | відгук порівняно зі звичайним | У скільки разів пост зібрав більше чи менше реакцій, ніж попередні пости автора; 1 означає як завжди. |
+| ER, engagement rate | частка реакцій від показів | Скільки людей з тих, хто побачив пост, лайкнули, прокоментували чи поширили. |
+| baseline, rolling median | звичайний рівень автора | Типовий результат 12 попередніх постів, з яким порівнюємо кожен новий пост. |
+| quadrant 💎 / 📣 / 🎯 / ⚪ | тип результату поста | Поєднання двох осей: чи пост зібрав відгук і чи розпочав діалоги; від «самородка» до «слабкого». |
+| Performance tier gem / strong, Recycle eligible | рівень поста: найкращий · сильний | Позначка постів, які варто переробити в інший формат; у звіті пишемо словами. |
+| n-gate, n ≥ 4 | мінімум постів для висновку | Висновок про тему чи формат робимо від 4 постів; 2–3 пости дають лише сигнал. |
+| calibrate, weights, angle_weight, validated_factor | перерахунок пріоритетів за вашими даними | Раз на місяць дивимось, які теми, формати й кути реально заходили, і за цим оцінюємо нові ідеї. |
+| pillar, П1–П4 | тема-опора | Одна з 3–5 постійних тем автора; у документі пишемо назву теми словами, без кодів П1–П4. |
+| angle (Personal story, Lessons, Mistakes, How-I, Listicle, Case, Villain) | кут подачі | З якого боку розказуємо тему: особиста історія, уроки, помилки, як я роблю, список, кейс або суперечка з поширеною думкою. |
+| viral lever, lever | що змушує реагувати на пост | Причина, через яку люди читають і реагують: особиста історія, суперечлива думка, корисна інструкція тощо. |
+| repurpose, recycle | переробка поста | Пост, що вже спрацював, переписуємо в іншому форматі чи з іншого боку, бо інтерес до теми вже доведено. |
+<!-- glossary:end -->

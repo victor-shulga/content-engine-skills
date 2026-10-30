@@ -49,3 +49,22 @@ argument-hint: "[client] [step]"
 - Дизайн-роботи для Viktor — бренд-кіт Victor Shulga (білий фон, корал #E85A4F);
   для клієнтів — їхні бренд-кіти. Ніколи не змішувати.
 - Кожен крок завершується коротким summary + що далі.
+
+## Terms and plain-language output
+
+<!-- glossary:start terms=idea-pool,content-pillar,repurpose -->
+Rules for every document a client or their team will read (review, roast, canvas, offer cards, instruction):
+
+1. **Open with «Словник цього документа»**: only the terms that actually appear in it, at most 10, each as «термін: що це простими словами». Like the definitions section of a contract.
+2. **No internal codes or letter scales in the text** (A/B/C, D L T E, BLEND numbers without words, Own/Shared/Generic, Z1.4, GATE 2.5, T1–T6). Write the meaning instead: «є цифра з клієнтом», not «A».
+3. **Use the plain form from the table below.** English stays only for tool names and for copy that ships in English (promises, hooks, subject lines). If the document is in another language, translate the plain form, never the internal term.
+4. **Do not score what cannot exist yet.** A block that depends on work not done (signal catalog, case studies, a previous step) gets «пропущено: спершу потрібно <що саме>», not a score.
+5. **Every section of a review opens with one concrete action** («до наступного дзвінка: …»), then at most five lines of why. No paragraph that only restates the framework.
+
+
+| Internal term (this skill) | Write for the reader | What it means |
+|---|---|---|
+| Idea Pool | банк ідей | Таблиця в Notion з усіма ідеями для постів, з якої щотижня вибирають теми. |
+| pillar, П1–П4 | тема-опора | Одна з 3–5 постійних тем автора; у документі пишемо назву теми словами, без кодів П1–П4. |
+| repurpose, recycle | переробка поста | Пост, що вже спрацював, переписуємо в іншому форматі чи з іншого боку, бо інтерес до теми вже доведено. |
+<!-- glossary:end -->

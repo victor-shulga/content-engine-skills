@@ -48,6 +48,36 @@ argument-hint: "<person-linkedin-url> <company-site-or-linkedin>"
   частина універсальні (AI-кліше), частина — специфічні для людини (з аналізу постів).
 - Хуки-приклади в піларах — за правилами `${CLAUDE_PLUGIN_ROOT}/reference/hook-bank.md`.
 
+## Terms and plain-language output
+
+<!-- glossary:start terms=content-pillar,tofu-mofu-bofu,viral-lever,signature-concept,enemy,voice-profile,competence-proof,offer-ladder,dream-outcome,fact-cartridges,idea-pool,linkedin-sellability,hook,matrix-expansion -->
+Rules for every document a client or their team will read (review, roast, canvas, offer cards, instruction):
+
+1. **Open with «Словник цього документа»**: only the terms that actually appear in it, at most 10, each as «термін: що це простими словами». Like the definitions section of a contract.
+2. **No internal codes or letter scales in the text** (A/B/C, D L T E, BLEND numbers without words, Own/Shared/Generic, Z1.4, GATE 2.5, T1–T6). Write the meaning instead: «є цифра з клієнтом», not «A».
+3. **Use the plain form from the table below.** English stays only for tool names and for copy that ships in English (promises, hooks, subject lines). If the document is in another language, translate the plain form, never the internal term.
+4. **Do not score what cannot exist yet.** A block that depends on work not done (signal catalog, case studies, a previous step) gets «пропущено: спершу потрібно <що саме>», not a score.
+5. **Every section of a review opens with one concrete action** («до наступного дзвінка: …»), then at most five lines of why. No paragraph that only restates the framework.
+
+
+| Internal term (this skill) | Write for the reader | What it means |
+|---|---|---|
+| pillar, П1–П4 | тема-опора | Одна з 3–5 постійних тем автора; у документі пишемо назву теми словами, без кодів П1–П4. |
+| TOFU / MOFU / BOFU, funnel | етап воронки: знайомство · інтерес · рішення | Показує, для кого пост: для тих, хто вас ще не знає, хто вже придивляється, або хто готовий купувати. |
+| viral lever, lever | що змушує реагувати на пост | Причина, через яку люди читають і реагують: особиста історія, суперечлива думка, корисна інструкція тощо. |
+| signature, signature concept | фірмова думка автора | Одна впізнавана ідея чи фраза, з якою автора асоціюють; вона повторюється в профілі й постах. |
+| enemy | старий спосіб, який ви замінюєте | не конкурент, а звичка: власна команда, що тоне в переробках, «п'ять фрілансерів»; показує, чому новий спосіб кращий |
+| voice profile, voice | манера письма автора | Як автор пише: слова, ритм, улюблені звороти і список того, чого він ніколи не пише. |
+| competence proof | доказ, що автор у темі | Реальний досвід, цифра чи кейс автора; без нього пост на цю тему не пишемо. |
+| offer ladder, tiers | драбина оферів | кілька оферів від безкоштовного до найдорожчого, які ведуть того самого клієнта до одного результату; на кожній сходинці він платить і довіряє більше |
+| dream outcome | бажаний результат клієнта | як виглядає ситуація клієнта, коли проблему вирішено, його ж словами |
+| факти-патрони | перевірені цифри автора | Біографічні й робочі цифри з джерелом, які можна ставити в пост і на креатив; інших цифр не вигадуємо. |
+| Idea Pool | банк ідей | Таблиця в Notion з усіма ідеями для постів, з якої щотижня вибирають теми. |
+| LinkedIn sellability scoring (4 axes × 8 criteria) | наскільки офер продається через LinkedIn | Оцінка кожного оферу: чи зрозуміло його пояснити в пості і чи захоче читач зробити перший крок. |
+| hook, cold hook | гачок | перший рядок листа, через який людина читає далі |
+| matrix-expansion | ідея з таблиці тем | Ідея, складена з комбінації теми й кута без живого сигналу; важить менше за ідею з дзвінка чи реального болю. |
+<!-- glossary:end -->
+
 ## Вихід (Notion)
 
 1. Якщо нема головної сторінки «Content Engine» — створи її + DB Idea Pool / Weekly Plans /
