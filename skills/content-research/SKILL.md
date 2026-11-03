@@ -89,7 +89,8 @@ Fathom URL (внутрішній, не для поста).
    Близький дубль — пропусти АБО збагати наявну картку новим кутом (не плоди записи).
 3. **Пауза реюзу**: якщо тема перетинається з карткою, де `Last used` < 1–3 міс — пропусти.
 4. **Тег**: `Pillar` (1 з 4) · `Funnel` · `Format` (пропозиція, не фікс) · чернетка `Hook draft`
-   за `hook-bank.md` · `Competence proof` · `Source` · `Source link`.
+   за `hook-bank.md` · `Competence proof` · `Problem` (хто її має · що втрачає · широка чи вузька; ширша
+   формула тієї ж ідеї краща за вузьку) · `Source` · `Source link`.
 5. **Скор** 0–100 (як hook-bank §скоринг): viral lever × специфічність × відповідність voice ×
    свіжість сигналу. Сигнал з дзвінка/реального болю > matrix-expansion.
 6. **Запис**: `Status = new` у Idea Pool (`notion-schema.md`).
