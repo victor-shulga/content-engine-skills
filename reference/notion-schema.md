@@ -26,6 +26,7 @@ Content Engine                      ← головна сторінка (workspa
 | Format | select | text-only / single image / carousel / infographic / lead magnet / video |
 | Hook draft | rich_text | чорновий хук (формула: ідея + компетенція) |
 | Competence proof | rich_text | чим підкріплена компетенція (число/кейс/досвід) |
+| Problem | rich_text | хто має проблему · що втрачає · широка чи вузька (впізнає за перший рядок чи ні). Для Personal: «немає, особистий пост» |
 | Source | select | research-outlier / call-insight / own-thought / comment-mining / recycle / matrix-expansion |
 | Source link | url | лінк на пост-референс / транскрипт / оригінал |
 | Score | number | 0–100, рекомендатор |
